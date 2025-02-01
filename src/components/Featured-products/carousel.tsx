@@ -28,7 +28,7 @@ const ProductCarousel: React.FC<PropType> = ({ slides, options }) => {
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          <div className="embla__slide">Slide 1</div>
+          <div className="embla__slide">Slide 111</div>
           <div className="embla__slide">Slide 2</div>
           <div className="embla__slide">Slide 3</div>
           <div className="embla__slide">Slide 4</div>
