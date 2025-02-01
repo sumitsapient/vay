@@ -1,0 +1,30 @@
+{
+  "name": "vayexim-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ntegral/react-owl-carousel": "^1.0.1",
+    "bootstrap": "^5.3.3",
+    "embla-carousel-react": "^8.5.2",
+    "jquery": "^3.7.1",
+    "next": "15.0.4",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.6",
+    "react-dom": "^19.0.0",
+    "react-owl-carousel": "^2.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.4",
+    "typescript": "^5"
+  }
+}
