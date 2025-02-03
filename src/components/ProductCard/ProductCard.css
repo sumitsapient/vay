@@ -1,0 +1,18 @@
+.product-card {
+  background-color: #f7f5f7;
+  border-radius: 20px;
+  padding: 20px;
+}
+.product-card .product-image {
+  display: flex;
+  justify-content: center;
+}
+.product-card .product-title {
+  padding-top: 20px;
+}
+.product-card .product-title h3 {
+  font-size: 21px;
+  line-height: 64px;
+  text-align: center;
+  margin: 0;
+}
