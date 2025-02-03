@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 import Image from "next/image";
-import "./hero-banner.css";
+import "./HeroBanner.css";
 
 function HomeBanner() {
   return (
@@ -12,8 +12,10 @@ function HomeBanner() {
       <Container fluid className="home-banner">
         <Row>
           <Col md={6} className="banner-content">
-            <h1>TEXTILE LOREM IPSUM IS OF THE PRINTING</h1>
-            <p className="heading-1">
+            <h1 className="heading-1">
+              TEXTILE LOREM IPSUM IS OF THE PRINTING
+            </h1>
+            <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry’s standard dummy text
               ever since the 1500s,
