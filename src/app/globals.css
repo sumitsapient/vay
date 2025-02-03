@@ -1,6 +1,51 @@
 @import url("https://fonts.cdnfonts.com/css/helvetica-neue-5");
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./fonts/HelveticaNeue-Ultralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./fonts/HelveticaNeue-Thin.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./fonts/HelveticaNeue-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./fonts/HelveticaNeue-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./fonts/HelveticaNeue-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./fonts/HelveticaNeue-Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --black: #000;
   --white: #fff;
@@ -11,6 +56,7 @@
   --dark-blue: #2962dd;
   --primary-font: "Helvetica Neue", sans-serif;
   --body-font: "Helvetica Neue", sans-serif;
+  --bs-gutter-x: 1.5rem;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -113,6 +159,8 @@ h4,
 h5,
 h6 {
   font-family: var(--primary-font);
+  color: var(--primary-black);
+  font-weight: 500;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -150,5 +198,79 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* container gutter margin */
 
 /* Style guide begins */
+p {
+  font-size: 12px;
+  line-height: 17px;
+}
+.heading-1 {
+  font-size: 27px;
+  line-height: 35px;
+}
+.heading-2 {
+  font-size: 27px;
+  line-height: 35px;
+}
+
+/* cta styles */
+.button {
+}
+
+@media (width>= 768px) {
+  p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .heading-1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .heading-2 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+@media (width>= 992px) {
+  p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .heading-1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .heading-2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@media (width>= 1200px) {
+  p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .heading-1 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  .heading-2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+@media (width>= 1400px) {
+  p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .heading-1 {
+    font-size: 55px;
+    line-height: 72px;
+  }
+  .heading-2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}

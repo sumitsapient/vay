@@ -5,7 +5,7 @@ import React, {
   useState,
 } from "react";
 import { EmblaCarouselType } from "embla-carousel";
-
+import "./carousel-dots.css";
 type UseDotButtonType = {
   selectedIndex: number;
   scrollSnaps: number[];
