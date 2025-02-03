@@ -5,12 +5,13 @@ import "./megaMenu.css";
 
 interface SubProduct {
   name: string;
-  product_id?: string; // Optional, only if needed for navigation
+  slug: string;
 }
 
 interface ProductCategory {
   product_id: string;
   product_name: string;
+  slug: string;
   subproducts: SubProduct[];
 }
 
@@ -32,7 +33,9 @@ export default function MegaMenu() {
           <ul>
             {category.subproducts.map((sub) => (
               <li key={sub.name}>
-                <Link href={`/products/${category.product_id}`}>{sub.name}</Link>
+                <Link href={`/products/${category.slug}/${sub.slug}`}>
+                  {sub.name}
+                </Link>
               </li>
             ))}
           </ul>

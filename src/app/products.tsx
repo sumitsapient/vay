@@ -1,4 +1,4 @@
-    import ProductCarousel from "@/components/Featured-products/carousel";
+import ProductCarousel from "@/components/Featured-products/carousel";
 import Header from "@/components/Header/header";
 import HomeBanner from "@/components/Hero-banner/hero-banner";
 
