@@ -6,7 +6,7 @@ import Link from "next/link";
 import Logo from "../../../public/header-logo.svg";
 import Search from "../../../public/search.svg";
 import MegaMenu from "../MegaMenu/MegaMenu";
-import "./Header.css";
+import "./header.css";
 
 interface SearchResult {
   name: string;
