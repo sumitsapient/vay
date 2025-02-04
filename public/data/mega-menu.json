@@ -1,0 +1,139 @@
+[
+  {
+    "product_id": "VAY-001",
+    "slug": "festive-clothing",
+    "product_name": "INDIAN FESTIVE CLOTHING",
+    "subproducts": [
+      { "name": "Weddings","slug": "wedding" },
+      { "name": "Puja Ceremonies","slug": "puja-ceremonies" },
+      { "name": "Traditional Ceremony Clothing","slug": "traditional" },
+      { "name": "Bangles","slug": "bangles" },
+      { "name": "Imitation Jwellery","slug":"imitation-jwellery" }
+    ]
+  },
+  {
+    "product_id": "VAY-002",
+    "product_name": "EGG POWDER",
+    "slug": "egg-powder",
+    "subproducts": [
+      { "name": "Whole Egg Powder", "slug": "whole-egg-powder" },
+      { "name": "Egg White Powder", "slug": "egg-white-powder" },
+      { "name": "Egg Yolk Powder", "slug": "egg-yolk-powder" },
+      { "name": "Egg Shells Powder", "slug": "egg-shells-powder" }
+    ]
+  },
+  {
+    "product_id": "VAY-003",
+    "product_name": "TEA",
+    "slug": "tea",
+    "subproducts": [
+      { "name": "Black Tea", "slug": "black-tea" },
+      { "name": "Green Tea", "slug": "green-tea" },
+      { "name": "Oolong", "slug": "oolong" },
+      { "name": "Masala", "slug": "masala" },
+      { "name": "CTC(cut, tear, curl)", "slug": "ctc" },
+      { "name": "White Tea", "slug": "white-tea" }
+    ]
+  },
+    {
+      "product_id": "VAY-004",
+      "product_name": "COFFEE",
+      "slug": "coffee",
+      "subproducts": [
+        { "name": "Arabica", "slug": "arabica" },
+        { "name": "Robusta", "slug": "robusta" },
+        { "name": "Green Coffee Beans", "slug": "green-coffee-beans" },
+        { "name": "Roasted Coffee Beans", "slug": "roasted-coffee-beans" },
+        { "name": "Instant Coffee", "slug": "instant-coffee" },
+        { "name": "Liberica", "slug": "liberica" }
+      ]
+    },
+    {
+      "product_id": "VAY-005",
+      "product_name": "HANDICRAFTS",
+      "slug": "handicrafts",
+      "subproducts": [
+        { "name": "Wooden Toys", "slug": "wooden-toys" },
+        { "name": "Metalware", "slug": "metalware" },
+        { "name": "Natural Materials", "slug": "natural-materials" },
+        { "name": "Others", "slug": "others" }
+      ]
+    },
+  {
+    "product_id": "VAY-006",
+    "product_name": "FRUITS AND VEGETABLES",
+    "slug": "fruits-and-vegetables",
+    "subproducts": [
+      { "name": "Dried Fruits", "slug": "dried-fruits" },
+      { "name": "Dried Vegetables", "slug": "dried-vegetables" },
+      { "name": "Processed", "slug": "processed" },
+      { "name": "Fresh Fruits", "slug": "fresh-fruits" },
+      { "name": "Fresh Vegetables", "slug": "fresh-vegetables" }
+    ]
+  },
+  {
+    "product_id": "VAY-007",
+    "product_name": "TEXTILES",
+    "slug": "textiles",
+    "subproducts": [
+      { "name": "Fabrics", "slug": "fabrics" },
+      { "name": "Readymade Garments", "slug": "readymade-garments" },
+      { "name": "Home Textiles", "slug": "home-textiles" },
+      { "name": "Technical Textiles", "slug": "technical-textiles" }
+    ]
+  },
+  {
+    "product_id": "VAY-008",
+    "product_name": "OILS",
+    "slug": "oils",
+    "subproducts": [
+      { "name": "Carrier Oils", "slug": "carrier-oils" },
+      { "name": "Herbal Oils", "slug": "herbal-oils" },
+      { "name": "Cold-Pressed Oils", "slug": "cold-pressed-oils" },
+      { "name": "Essential Oils", "slug": "essential-oils" }
+    ]
+  },
+    {
+      "product_id": "VAY-009",
+      "product_name": "JUICE POWDERS",
+      "slug": "juice-powders",
+      "subproducts": [
+        { "name": "Fruit Powders", "slug": "fruit-powders" },
+        { "name": "Vegetable Powders", "slug": "vegetable-powders" },
+        { "name": "Coconut water powder", "slug": "coconut-water-powder" },
+        { "name": "Essential Oils", "slug": "essential-oils" }
+      ]
+    },
+    {
+      "product_id": "VAY-0010",
+      "product_name": "AYURVEDIC",
+      "slug": "ayurvedic",
+      "subproducts": [
+        { "name": "Ashwagandha", "slug": "ashwagandha" },
+        { "name": "Turmeric", "slug": "turmeric" },
+        { "name": "Neem", "slug": "neem" }
+      ]
+    },
+    {
+      "product_id": "VAY-0011",
+      "product_name": "EXOTIC",
+      "slug": "exotic",
+      "subproducts": [
+        { "name": "Exotic Fruits", "slug": "exotic-fruits" },
+        { "name": "Exotic Vegetables", "slug": "exotic-vegetables" }
+      ]
+    },
+    {
+      "product_id": "VAY-0012",
+      "product_name": "OTHER",
+      "slug": "other",
+      "subproducts": [
+        { "name": "Lac", "slug": "lac" },
+        { "name": "Aloe Vera", "slug": "aloe-vera" },
+        { "name": "Carpets", "slug": "carpets" },
+        { "name": "Hop Shoots", "slug": "hop-shoots" },
+        { "name": "Soaps", "slug": "soaps" }
+      ]
+    }
+]
+  
