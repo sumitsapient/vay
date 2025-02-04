@@ -1,0 +1,40 @@
+{
+  "egg-powder": {
+    "product_name": "EGG POWDER",
+    "slug": "egg-powder",
+    "description": "Detailed description here...",
+    "image": "https://example.com/images/egg-powder.jpg",
+    "subproducts": [
+      {
+        "name": "Whole Egg Powder",
+        "slug": "whole-egg-powder",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/whole-egg.jpg",
+        "tag": "Eco-friendly"
+      },
+      {
+        "name": "Egg Whites Powder",
+        "slug": "egg-whites-powder",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/whole-egg.jpg",
+        "tag": "Eco-friendly"
+      },
+      {
+        "name": "Egg Yolk Powder",
+        "slug": "egg-yolk-powder",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/whole-egg.jpg",
+        "tag": "Eco-friendly"
+      },
+      {
+        "name": "Egg Shells Powder",
+        "slug": "egg-shells-powder",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/whole-egg.jpg",
+        "tag": "Eco-friendly"
+      }
+    ]
+  }
+}
+
+  
