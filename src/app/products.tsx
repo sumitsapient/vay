@@ -1,6 +1,6 @@
-import ProductCarousel from "@/components/Featured-products/carousel";
-import Header from "@/components/Header/header";
-import HomeBanner from "@/components/Hero-banner/hero-banner";
+import ProductCarousel from "@/components/Featured-products/FeaturedProducts";
+import Header from "@/components/Header/Header";
+import HomeBanner from "@/components/HeroBanner/HeroBanner";
 
 export default function Home() {
   return (

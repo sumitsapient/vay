@@ -33,8 +33,8 @@ export default function ProductDetailsPage() {
 
         // Find the product using the slug
         const productEntry = Object.values(data).find(
-          (item) => item.slug === product
-        ) as Product;
+          (item) => (item as Product).slug === product
+        ) as Product | undefined;
 
         if (productEntry) {
           setProductData(productEntry);

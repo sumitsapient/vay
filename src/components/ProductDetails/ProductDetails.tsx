@@ -1,43 +1,83 @@
 import { useParams } from "next/navigation";
-import productDetails from "@/data/product-details.json";
+import { useEffect, useState } from "react";
 
-const ProductDetail = () => {
-  const { productId, subproduct } = useParams(); // Get params from URL
+interface SubProduct {
+  name: string;
+  slug: string;
+  short_description: string;
+  image: string;
+  tag: string;
+}
 
-  console.log("Params:", { productId, subproduct });
+interface Product {
+  product_name: string;
+  slug: string;
+  description: string;
+  image: string;
+  subproducts: SubProduct[];
+}
 
-  if (!productId) {
-    return <h1>Error: No product selected.</h1>;
-  }
+export default function ProductDetailsPage() {
+  const { product, subproduct } = useParams();
+  console.log(product, subproduct);
 
-  const product = productDetails[productId];
+  const [productData, setProductData] = useState<Product | null>(null);
+  const [selectedSubproduct, setSelectedSubproduct] = useState<SubProduct | null>(null);
 
-  if (!product) {
-    return <h1>Product Not Found</h1>;
-  }
+  useEffect(() => {
+    if (product) {
+      // Fetch product details from the public folder
+      fetch("/product-details.json")
+        .then((res) => res.json())
+        .then((data: Record<string, Product>) => { // Type the fetched data here
+          // Find the product using the slug
+          const productEntry = Object.values(data).find(
+            (item) => item.slug === product
+          );
 
-  if (!subproduct) {
-    return <h1>Error: No subproduct selected.</h1>;
-  }
+          if (productEntry) {
+            setProductData(productEntry);
 
-  // Ensure subproducts exist and use optional chaining (?.) to prevent undefined errors
-  const subproductData = product.subproducts?.find(
-    (item) => item?.name?.toLowerCase().replace(/\s+/g, "-") === subproduct
-  );
+            // Find the subproduct if it's provided in the URL
+            const selectedSubproduct = productEntry.subproducts.find(
+              (sub) => sub.slug === subproduct
+            );
 
-  console.log("Matching Subproduct:", subproductData);
+            setSelectedSubproduct(selectedSubproduct || null);
+          }
+        })
+        .catch((error) => console.error("Error fetching product data:", error));
+    }
+  }, [product, subproduct]);
 
-  if (!subproductData) {
-    return <h1>Subproduct Not Found</h1>;
-  }
+  if (!productData) return <p>Loading...</p>;
 
   return (
     <div>
-      <h1>{subproductData.name}</h1>
-      <p>{subproductData.short_description}</p>
-      <img src={subproductData.image} alt={subproductData.name} />
+      <h1>{selectedSubproduct ? selectedSubproduct.name : productData.product_name}</h1>
+      <img
+        src={selectedSubproduct ? selectedSubproduct.image : productData.image}
+        alt={selectedSubproduct ? selectedSubproduct.name : productData.product_name}
+      />
+      <p>
+        {selectedSubproduct ? selectedSubproduct.short_description : productData.description}
+      </p>
+
+      {/* Display related subproducts if a subproduct is selected */}
+      {selectedSubproduct && (
+        <div>
+          <h2>Related Subproducts</h2>
+          <ul>
+            {productData.subproducts
+              .filter((sub) => sub.slug !== subproduct)
+              .map((sub) => (
+                <li key={sub.slug}>
+                  <a href={`/products/${product}/${sub.slug}`}>{sub.name}</a>
+                </li>
+              ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
-};
-
-export default ProductDetail;
+}
