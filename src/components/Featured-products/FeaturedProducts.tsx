@@ -26,9 +26,9 @@ const FeaturedProducts = () => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="featured-products">
+    <section className="section featured-products">
       <div className="container">
-        <div className="row">
+        <div className="row heading-row">
           <div className="col-lg-12">
             <h2 className="heading-2">FEATURED PRODUCTS</h2>
             <p>Meet Our Handpicked Favorites</p>
