@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation"; // Get dynamic route params
+import InquiryForm from "@/components/InquiryForm/InquiryForm";
 
 interface SubProduct {
   name: string;
@@ -20,7 +21,7 @@ interface Product {
 
 export default function ProductDetailsPage() {
   const { product, subproduct } = useParams() || {}; // Ensure it never crashes
-  console.log(product);
+  const [showInquiryForm, setShowInquiryForm] = useState(false);
 
   const [productData, setProductData] = useState<Product | null>(null);
   const [selectedSubproduct, setSelectedSubproduct] = useState<SubProduct | null>(null);
@@ -62,7 +63,10 @@ export default function ProductDetailsPage() {
       <p>
         {selectedSubproduct ? selectedSubproduct.short_description : productData.description}
       </p>
-
+      <button onClick={() => setShowInquiryForm(true)}>Request a Quote</button>
+       {showInquiryForm && (
+              <InquiryForm productName={product} onClose={() => setShowInquiryForm(false)} />
+            )}
       {/* Display related subproducts if a subproduct is selected */}
       {selectedSubproduct && (
         <div>

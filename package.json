@@ -10,11 +10,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@firebase/firestore": "^4.7.6",
     "@ntegral/react-owl-carousel": "^1.0.1",
     "bootstrap": "^5.3.3",
     "embla-carousel-react": "^8.5.2",
+    "firebase": "^11.2.0",
     "jquery": "^3.7.1",
     "next": "15.0.4",
+    "nodemailer": "^6.10.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.6",
     "react-dom": "^19.0.0",
