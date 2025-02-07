@@ -1,8 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 interface InquiryFormProps {
-  productName?: string; // Auto-fill product name if available
+  productName?: string | string[]; // Handle possible array type
   onClose: () => void; // Function to close modal
 }
 
@@ -12,8 +12,16 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ productName, onClose }) => {
     email: "",
     company: "",
     message: "",
-    product: productName || "",
+    product: "",
   });
+
+  // Ensure product is always a string
+  useEffect(() => {
+    setFormData((prev) => ({
+      ...prev,
+      product: Array.isArray(productName) ? productName[0] : productName || "",
+    }));
+  }, [productName]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

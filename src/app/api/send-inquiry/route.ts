@@ -69,6 +69,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true, message: "Inquiry saved & email sent!" });
   } catch (error) {
     console.error("❌ Error processing inquiry:", error);
-    return NextResponse.json({ success: false, message: `Failed to process inquiry: ${error.message}` });
+    const errorMessage = error instanceof Error ? error.message : "Unknown error occurred";
+    return NextResponse.json({ success: false, message: `Failed to process inquiry: ${errorMessage}` });
   }
 }
