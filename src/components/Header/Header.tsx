@@ -101,7 +101,7 @@ function Header() {
       <Navbar.Collapse id="navbarScroll">
         <Nav className="me-auto my-2 my-lg-0 justify-content-end flex-grow-1">
           <Nav.Link href="/">Home</Nav.Link>
-
+          <Nav.Link href="/blogs">Blogs</Nav.Link>
           <div
             className="stylemega-menu-wrapper"
             onMouseEnter={() => setShowMegaMenu(true)}

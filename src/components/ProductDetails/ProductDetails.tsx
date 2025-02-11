@@ -18,8 +18,9 @@ interface Product {
 }
 
 export default function ProductDetailsPage() {
-  const { product, subproduct } = useParams();
-  console.log(product, subproduct);
+  const params = useParams() as Record<string, string | undefined>;
+  const product = params.product;
+  const subproduct = params.subproduct;
 
   const [productData, setProductData] = useState<Product | null>(null);
   const [selectedSubproduct, setSelectedSubproduct] = useState<SubProduct | null>(null);
