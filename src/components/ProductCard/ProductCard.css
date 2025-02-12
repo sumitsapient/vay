@@ -7,6 +7,9 @@
   display: flex;
   justify-content: center;
 }
+.product-card .product-image img {
+  width: 100%;
+}
 .product-card .product-title {
   padding-top: 20px;
 }
