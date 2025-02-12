@@ -8,14 +8,18 @@ interface Blog {
     title: string;
     author: string;
     date: string;
+    coverImage?: string;
   };
   content: string;
 }
 
+// ✅ Corrected typing for params
 export default async function BlogPost({ params }: { params: { slug: string } }) {
-  const blog: Blog | null = getBlogBySlug(params.slug);
+  const blog: Blog | null = await getBlogBySlug(params.slug);
 
-  if (!blog) return <p>Blog not found</p>;
+  if (!blog) {
+    return <p>Blog not found</p>;
+  }
 
   return (
     <div className="blog-container">
@@ -24,7 +28,16 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         By {blog.metadata.author} on {blog.metadata.date}
       </p>
 
-      {/* Render Markdown content with optimized images */}
+      {blog.metadata.coverImage && (
+        <Image
+          src={blog.metadata.coverImage}
+          alt="Cover Image"
+          width={800}
+          height={500}
+          style={{ objectFit: "cover", borderRadius: "10px" }}
+        />
+      )}
+
       <ReactMarkdown
         className="blog-content"
         remarkPlugins={[remarkGfm]}
@@ -46,8 +59,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   );
 }
 
-// ✅ Replace `getStaticPaths`
+// ✅ Correctly using generateStaticParams
 export async function generateStaticParams() {
-  const blogs = getAllBlogs();
+  const blogs = await getAllBlogs();
   return blogs.map((blog) => ({ slug: blog.slug }));
 }
