@@ -9,7 +9,6 @@ import TrendingdProducts from "@/components/TrendingProducts/TrendingProducts";
 export default function Home() {
   return (
     <>
-      <Header />
       <HomeBanner />
       <FeaturedProducts />
       <CtaBar />
