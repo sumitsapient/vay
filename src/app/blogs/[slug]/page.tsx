@@ -12,11 +12,9 @@ interface Blog {
   content: string;
 }
 
-interface BlogPostProps {
-  blog: Blog;
-}
+export default async function BlogPost({ params }: { params: { slug: string } }) {
+  const blog: Blog | null = getBlogBySlug(params.slug);
 
-export default function BlogPost({ blog }: BlogPostProps) {
   if (!blog) return <p>Blog not found</p>;
 
   return (
@@ -35,8 +33,8 @@ export default function BlogPost({ blog }: BlogPostProps) {
             <Image
               src={src!}
               alt={alt || "Blog Image"}
-              width={800} // Adjust as needed
-              height={500} // Adjust as needed
+              width={800}
+              height={500}
               style={{ objectFit: "cover", borderRadius: "10px" }}
             />
           ),
@@ -48,15 +46,8 @@ export default function BlogPost({ blog }: BlogPostProps) {
   );
 }
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const blog = getBlogBySlug(params.slug);
-  return { props: { blog } };
-}
-
-export async function getStaticPaths() {
+// ✅ Replace `getStaticPaths`
+export async function generateStaticParams() {
   const blogs = getAllBlogs();
-  return {
-    paths: blogs.map((blog) => ({ params: { slug: blog.slug } })),
-    fallback: false,
-  };
+  return blogs.map((blog) => ({ slug: blog.slug }));
 }
