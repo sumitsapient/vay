@@ -1,25 +1,34 @@
 "use client";
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./ProductCard.css";
 
-function ProductCard() {
-  const [data, setData] = useState([]);
+interface ProductCategory {
+  product_id: string;
+  product_name: string;
+  image?: string; // Optional in case an image is missing
+}
 
-  const getData = () => {
-    fetch("products-listing.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((myjson) => {
-        console.log(myjson);
-        setData(myjson);
+function ProductCard() {
+  const [data, setData] = useState<ProductCategory[]>([]);
+
+  const getData = async () => {
+    try {
+      const response = await fetch("products-listing.json", {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
       });
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch product data");
+      }
+
+      const myjson: ProductCategory[] = await response.json();
+      setData(myjson);
+    } catch (error) {
+      console.error("Error fetching product data:", error);
+    }
   };
 
   useEffect(() => {
@@ -28,26 +37,22 @@ function ProductCard() {
 
   return (
     <>
-      {data &&
-        data.length > 0 &&
-        data.map((prod) => {
-          return (
-            <div className="embla__slide" key={prod.product_id}>
-              <div className="product-card">
-                <div className="product-image">
-                  <img src="coffee-beans-levitate-white-background.png" />
-                  {/* <img
-                    src={prod.image ?? "/default-image.jpg"}
-                    alt={prod.product_name ?? "No Name"}
-                  /> */}
-                </div>
-                <div className="product-title">
-                  <h3>{prod.product_name ?? "Unnamed Product"}</h3>
-                </div>
+      {data.length > 0 ? (
+        data.map((prod) => (
+          <div className="embla__slide" key={prod.product_id}>
+            <div className="product-card">
+              <div className="product-image">
+                <img src="coffee-beans-levitate-white-background.png" />
+              </div>
+              <div className="product-title">
+                <h3>{prod.product_name ?? "Unnamed Product"}</h3>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))
+      ) : (
+        <p>Loading products...</p>
+      )}
     </>
   );
 }
