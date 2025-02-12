@@ -8,16 +8,18 @@ interface Blog {
     title: string;
     author: string;
     date: string;
+    coverImage?: string;
   };
   content: string;
 }
 
-interface BlogPostProps {
-  blog: Blog;
-}
+// ✅ Corrected typing for params
+export default async function BlogPost({ params }: { params: { slug: string } }) {
+  const blog: Blog | null = await getBlogBySlug(params.slug);
 
-export default function BlogPost({ blog }: BlogPostProps) {
-  if (!blog) return <p>Blog not found</p>;
+  if (!blog) {
+    return <p>Blog not found</p>;
+  }
 
   return (
     <div className="blog-container">
@@ -26,7 +28,16 @@ export default function BlogPost({ blog }: BlogPostProps) {
         By {blog.metadata.author} on {blog.metadata.date}
       </p>
 
-      {/* Render Markdown content with optimized images */}
+      {blog.metadata.coverImage && (
+        <Image
+          src={blog.metadata.coverImage}
+          alt="Cover Image"
+          width={800}
+          height={500}
+          style={{ objectFit: "cover", borderRadius: "10px" }}
+        />
+      )}
+
       <ReactMarkdown
         className="blog-content"
         remarkPlugins={[remarkGfm]}
@@ -35,8 +46,8 @@ export default function BlogPost({ blog }: BlogPostProps) {
             <Image
               src={src!}
               alt={alt || "Blog Image"}
-              width={800} // Adjust as needed
-              height={500} // Adjust as needed
+              width={800}
+              height={500}
               style={{ objectFit: "cover", borderRadius: "10px" }}
             />
           ),
@@ -48,15 +59,8 @@ export default function BlogPost({ blog }: BlogPostProps) {
   );
 }
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const blog = getBlogBySlug(params.slug);
-  return { props: { blog } };
-}
-
-export async function getStaticPaths() {
-  const blogs = getAllBlogs();
-  return {
-    paths: blogs.map((blog) => ({ params: { slug: blog.slug } })),
-    fallback: false,
-  };
+// ✅ Correctly using generateStaticParams
+export async function generateStaticParams() {
+  const blogs = await getAllBlogs();
+  return blogs.map((blog) => ({ slug: blog.slug }));
 }
