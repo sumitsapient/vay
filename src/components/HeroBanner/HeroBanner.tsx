@@ -20,6 +20,10 @@ function HomeBanner() {
               industry. Lorem Ipsum has been the industry’s standard dummy text
               ever since the 1500s,
             </p>
+            <a href="#" className="btn-text-icon">
+              <span className="btn-text">Explore</span>
+              <span className="btn-icon"></span>
+            </a>
           </Col>
           <Col md={6} className="banner-slider">
             <Carousel>
