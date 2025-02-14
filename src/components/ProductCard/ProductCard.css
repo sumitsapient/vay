@@ -7,12 +7,15 @@
   display: flex;
   justify-content: center;
 }
+.product-card .product-image img {
+  width: 100%;
+}
 .product-card .product-title {
   padding-top: 20px;
 }
 .product-card .product-title h3 {
-  font-size: 21px;
-  line-height: 64px;
+  font-size: 20px;
+  line-height: 30px;
   text-align: center;
   margin: 0;
 }
