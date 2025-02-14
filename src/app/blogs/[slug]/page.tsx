@@ -8,14 +8,16 @@ interface Blog {
     title: string;
     author: string;
     date: string;
+    excerpt?:string;
     coverImage?: string;
   };
   content: string;
 }
 
-// ✅ Corrected typing for params
-export default async function BlogPost({ params }: { params: { slug: string } }) {
-  const blog: Blog | null = await getBlogBySlug(params.slug);
+// Adjusted type for `params` as a Promise
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;  // Await the params here
+  const blog: Blog | null = await getBlogBySlug(slug);
 
   if (!blog) {
     return <p>Blog not found</p>;
@@ -38,28 +40,14 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         />
       )}
 
-      <ReactMarkdown
-        className="blog-content"
-        remarkPlugins={[remarkGfm]}
-        components={{
-          img: ({ src, alt }) => (
-            <Image
-              src={src!}
-              alt={alt || "Blog Image"}
-              width={800}
-              height={500}
-              style={{ objectFit: "cover", borderRadius: "10px" }}
-            />
-          ),
-        }}
-      >
+      <ReactMarkdown className="blog-content" remarkPlugins={[remarkGfm]}>
         {blog.content}
       </ReactMarkdown>
     </div>
   );
 }
 
-// ✅ Correctly using generateStaticParams
+// No change needed here
 export async function generateStaticParams() {
   const blogs = await getAllBlogs();
   return blogs.map((blog) => ({ slug: blog.slug }));
