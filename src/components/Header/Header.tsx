@@ -131,7 +131,9 @@ function Header() {
               <ul className="search-suggestions">
                 {searchResults.map((result) => (
                   <li key={result.slug}>
-                    <Link href={`/products/${result.productSlug}/${result.slug}`}>
+                    <Link
+                      href={`/products/${result.productSlug}/${result.slug}`}
+                    >
                       {highlightMatch(result.name, searchTerm)}
                     </Link>
                   </li>
