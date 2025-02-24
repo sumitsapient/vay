@@ -27,20 +27,25 @@ export default function MegaMenu() {
 
   return (
     <div className="mega-menu">
-      {menuData.map((category) => (
-        <div key={category.product_id} className="mega-menu-category">
-          <h4>{category.product_name}</h4>
-          <ul>
-            {category.subproducts.map((sub) => (
-              <li key={sub.name}>
-                <Link href={`/products/${category.slug}/${sub.slug}`}>
-                  {sub.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <div className="row">
+        {menuData.map((category) => (
+          <div
+            key={category.product_id}
+            className="mega-menu-category col-lg-3"
+          >
+            <h4 className="title">{category.product_name}</h4>
+            <ul>
+              {category.subproducts.map((sub) => (
+                <li key={sub.name}>
+                  <Link href={`/products/${category.slug}/${sub.slug}`}>
+                    {sub.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -273,6 +273,9 @@ a {
     fill: var(--dark-blue);
   }
 }
+a:hover {
+  color: var(--dark-blue);
+}
 
 /* cta styles */
 
