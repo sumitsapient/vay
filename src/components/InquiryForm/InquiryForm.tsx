@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import "./InquiryForm.css";
 
 interface InquiryFormProps {
   productName?: string | string[]; // Handle possible array type
@@ -23,7 +24,9 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ productName, onClose }) => {
     }));
   }, [productName]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -60,25 +63,77 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ productName, onClose }) => {
   return (
     <div className="inquiry-modal">
       <div className="modal-content">
-        <h2>Request a Quote</h2>
-        <form onSubmit={handleSubmit}>
-          <label>Name:</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-
-          <label>Email:</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-
-          <label>Company:</label>
-          <input type="text" name="company" value={formData.company} onChange={handleChange} />
-
-          <label>Product:</label>
-          <input type="text" name="product" value={formData.product} readOnly />
-
-          <label>Message:</label>
-          <textarea name="message" value={formData.message} onChange={handleChange} required />
-
-          <button type="submit">Send Inquiry</button>
-          <button type="button" onClick={onClose}>Close</button>
+        <div className="modal-close-btn" onClick={onClose}>
+          <img src="/modal-close-icon.svg" />
+        </div>
+        <h2>Contact Us</h2>
+        <p className="sub-heading">Send Us a Message</p>
+        <form className="enquiry-form" onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-md-6">
+              <input
+                className="form-control"
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div className="col-md-6">
+              <input
+                className="form-control"
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email"
+                required
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6">
+              <input
+                className="form-control"
+                type="text"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+                placeholder="Company"
+              />
+            </div>
+            <div className="col-md-6">
+              <input
+                className="form-control"
+                type="text"
+                name="product"
+                value={formData.product}
+                placeholder="Product"
+                readOnly
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12">
+              <textarea
+                className="form-control"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Message"
+                required
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12 justify-content-center">
+              <button className="btn btn-primary" type="submit">
+                Send Inquiry
+              </button>
+            </div>
+          </div>
         </form>
       </div>
     </div>

@@ -1,3 +1,30 @@
+.section-cta-bar {
+  position: relative;
+  overflow-x: clip;
+}
+.section-cta-bar .left-shade {
+  height: 778px;
+  width: 778px;
+  background-image: url("../../../public/blue-spray.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  transform: translate(-40%, -67%);
+}
+.section-cta-bar .right-shade {
+  height: 778px;
+  width: 778px;
+  background-image: url("../../../public/green-spray.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transform: translate(45%, -30%);
+}
 .cta-bar {
   background-color: #222937;
   background-image: url("../../../public/dotted-square-cta.svg"),

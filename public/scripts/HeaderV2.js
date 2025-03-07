@@ -55,3 +55,21 @@ window.onresize = function () {
     }
   }
 };
+
+const accSingleTriggers = document.querySelectorAll(".acc-sub-title");
+accSingleTriggers.forEach((trigger) =>
+  trigger.addEventListener("click", toggleAccordion)
+);
+
+function toggleAccordion() {
+  const items = document.querySelectorAll(".mega-menu-category");
+  const thisItem = this.parentNode;
+
+  items.forEach((item) => {
+    if (thisItem == item) {
+      thisItem.classList.toggle("is-open");
+      return;
+    }
+    item.classList.remove("is-open");
+  });
+}

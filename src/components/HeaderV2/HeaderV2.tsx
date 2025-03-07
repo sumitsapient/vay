@@ -55,7 +55,7 @@ function HeaderV2() {
                     </div>
                   </li>
                   <li className="menu-item-has-children">
-                    <a href="#">Blog</a>
+                    <a href="/blogs">Blog</a>
                   </li>
                   <li>
                     <a href="#">Contact</a>
