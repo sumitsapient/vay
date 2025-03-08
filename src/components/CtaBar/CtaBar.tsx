@@ -20,6 +20,8 @@ const CtaBar = () => {
             </div>
           </div>
         </div>
+        <div className="left-shade"></div>
+        <div className="right-shade"></div>
       </section>
     </>
   );

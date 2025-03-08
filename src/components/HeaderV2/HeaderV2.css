@@ -3,6 +3,7 @@
   padding-left: 0;
   padding-right: 0;
   background-color: var(--white);
+  border-bottom: 1px solid var(--primary-light-gray);
 }
 .search-container {
   position: relative;
@@ -103,8 +104,8 @@
   font-size: 14px;
   color: var(--black);
   display: inline-block;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 @media (width >= 992px) {
@@ -266,8 +267,8 @@
     font-size: 14px;
     line-height: 14px;
     color: var(--black);
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
   .header .item-center nav .menu-main .mega-menu-category li a:hover {
     color: var(--dark-blue);
@@ -329,7 +330,7 @@
   color: var(--dark-blue);
   font-weight: 500;
   line-height: 1;
-  padding: 8px 0;
+  padding: 16px 0;
 }
 .header
   .menu

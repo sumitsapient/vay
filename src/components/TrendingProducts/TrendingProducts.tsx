@@ -76,6 +76,7 @@ const TrendingdProducts = () => {
           </div>
         </div>
       </div>
+      <div className="right-shape"></div>
     </section>
   );
 };

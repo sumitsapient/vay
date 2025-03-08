@@ -33,8 +33,8 @@ export default function MegaMenu() {
             key={category.product_id}
             className="mega-menu-category col-lg-3"
           >
-            <h4 className="title">{category.product_name}</h4>
-            <ul>
+            <h4 className="title acc-sub-title">{category.product_name}</h4>
+            <ul className="accordion-single-content">
               {category.subproducts.map((sub) => (
                 <li key={sub.name}>
                   <Link href={`/products/${category.slug}/${sub.slug}`}>

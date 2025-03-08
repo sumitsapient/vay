@@ -48,6 +48,8 @@
 :root {
   --black: #000;
   --white: #fff;
+  --primary-dark-gray: #555555;
+  --primary-light-gray: #eeeeee;
   --primary-black: #070707;
   --primary-light-blue: #add8e6;
   --secondary-light-blue: #f0f8ff;
@@ -276,13 +278,16 @@ a {
 a:hover {
   color: var(--dark-blue);
 }
-
+.form-control {
+  border: 1px solid var(--primary-dark-gray);
+  border-radius: 3px;
+}
 /* cta styles */
 
 @media (width>= 768px) {
   section.section {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
   p {
     font-size: 14px;
@@ -322,11 +327,11 @@ a:hover {
 }
 @media (width>= 992px) {
   :root {
-    --nav-height: 144px;
+    --nav-height: 104px;
   }
   section.section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 42px;
+    padding-bottom: 42px;
   }
   p {
     font-size: 16px;
@@ -366,8 +371,8 @@ a:hover {
 }
 @media (width>= 1200px) {
   section.section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 54px;
+    padding-bottom: 54px;
   }
   p {
     font-size: 18px;

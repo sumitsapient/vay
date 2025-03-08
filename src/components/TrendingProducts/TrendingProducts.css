@@ -1,3 +1,20 @@
+.trending-products {
+  position: relative;
+  overflow-x: clip;
+}
+.trending-products .right-shape {
+  width: 600px;
+  height: 400px;
+  background: #2962dd 0% 0% no-repeat padding-box;
+  border-radius: 60px;
+  opacity: 0.2;
+  rotate: 214deg;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transform: translate(-64%, -20%);
+}
 .trending-carousel.embla {
   margin: auto;
   position: relative;
