@@ -27,7 +27,7 @@ function ProductDetailTab() {
   return (
     <Tabs
       activeKey={key}
-      onSelect={(k) => setKey(k)}
+      onSelect={(k) => k && setKey(k)}
       defaultActiveKey="profile"
       id="ProductDetailTab"
       className="mb-3"
