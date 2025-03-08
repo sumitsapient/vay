@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "./InquiryForm.css";
+import "./inquiryForm.css";
 
 interface InquiryFormProps {
   productName?: string | string[]; // Handle possible array type
