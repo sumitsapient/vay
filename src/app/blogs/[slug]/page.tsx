@@ -40,9 +40,9 @@ export default async function BlogPost({
                       <Image
                         src={blog.metadata.coverImage}
                         alt="Cover Image"
-                        width={800}
-                        height={500}
-                        style={{ objectFit: "cover", borderRadius: "10px" }}
+                        width={500}
+                        height={300}
+                        className="cover-image"
                       />
                     )}
                     <div className="blog-item-content mt-5">

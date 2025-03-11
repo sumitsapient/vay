@@ -17,7 +17,7 @@ type PropType = {
 };
 
 const TrendingdProducts = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel();
+  const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start" });
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
