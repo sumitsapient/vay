@@ -18,6 +18,12 @@ interface ProductCategory {
 export default function MegaMenu() {
   const [menuData, setMenuData] = useState<ProductCategory[]>([]);
 
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleAccordion = (product_id) => {
+    setOpenIndex(openIndex === product_id ? null : product_id);
+  };
+
   useEffect(() => {
     fetch("/data/mega-menu.json") // Fetching MegaMenu JSON
       .then((res) => res.json())
@@ -28,12 +34,19 @@ export default function MegaMenu() {
   return (
     <div className="mega-menu">
       <div className="row">
-        {menuData.map((category) => (
+        {menuData.map((category, product_id) => (
           <div
-            key={category.product_id}
-            className="mega-menu-category col-lg-3"
+            key={product_id}
+            className={`mega-menu-category col-lg-3 ${
+              openIndex === product_id ? "is-open" : ""
+            }`}
           >
-            <h4 className="title acc-sub-title">{category.product_name}</h4>
+            <h4
+              className="title acc-sub-title"
+              onClick={() => toggleAccordion(product_id)}
+            >
+              {category.product_name}
+            </h4>
             <ul className="accordion-single-content">
               {category.subproducts.map((sub) => (
                 <li key={sub.name}>

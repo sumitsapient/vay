@@ -20,9 +20,9 @@ export default async function BlogList() {
                         {blog.coverImage && (
                           <Image
                             src={blog.coverImage}
-                            width={800}
-                            height={400}
                             alt="Cover Image"
+                            width={500}
+                            height={300}
                             className="cover-image"
                           />
                         )}

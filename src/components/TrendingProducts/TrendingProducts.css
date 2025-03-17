@@ -85,7 +85,7 @@
   }
   .trending-carousel .embla__slide {
     flex: 0 0 50%; /* Breakpoint SM slide covers 50% of the viewport */
-    padding-left: 30px;
+    padding-left: 20px;
   }
   .trending-carousel .heading-row {
     padding-bottom: 4.5rem;
@@ -104,7 +104,7 @@
   }
   .trending-carousel .embla__viewport {
     overflow: hidden;
-    padding: 24px;
+    padding: 12px;
   }
   .trending-carousel
     .embla__controls.embla__controls-trending-prod

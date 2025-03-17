@@ -44,7 +44,7 @@ function HeaderV2() {
                 </div>
                 <ul className="menu-main">
                   <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li className="menu-item-has-children">
                     <a href="#">
