@@ -18,9 +18,9 @@ interface ProductCategory {
 export default function MegaMenu() {
   const [menuData, setMenuData] = useState<ProductCategory[]>([]);
 
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (product_id) => {
+  const toggleAccordion = (product_id: number) => {
     setOpenIndex(openIndex === product_id ? null : product_id);
   };
 
