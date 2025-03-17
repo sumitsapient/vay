@@ -1,0 +1,177 @@
+.section.section-product-list {
+  padding-top: 0;
+}
+.section-product-filter {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--primary-light-gray);
+  margin-bottom: 20px;
+  h3 {
+    font-size: 16px;
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+}
+ul.filter-section {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 12px;
+}
+ul.filter-section li {
+  display: inline-block;
+  cursor: pointer;
+}
+ul.filter-section li label {
+  display: inline-block;
+  background-color: var(--light-gray-bg);
+  border: 2px solid var(--primary-light-gray);
+  color: var(--primary-dark-gray);
+  border-radius: 25px;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s;
+  height: 52px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+ul.filter-section li label::before {
+  height: 24px;
+  width: 24px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%231f1f1f"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>');
+  content: "";
+  transition: transform 0.3s ease-in-out;
+}
+
+ul.filter-section li input[type="checkbox"]:checked + label::before {
+  content: "";
+  height: 24px;
+  width: 24px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>');
+  transition: transform 0.3s ease-in-out;
+}
+
+ul.filter-section li input[type="checkbox"]:checked + label {
+  border: 2px solid var(--primary-green);
+  background-color: var(--primary-green);
+  color: #fff;
+  transition: all 0.2s;
+}
+
+ul.filter-section li {
+  position: relative;
+}
+ul.filter-section li input[type="checkbox"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+ul.filter-section li input[type="checkbox"]:focus + label {
+  border: 2px solid var(--primary-green);
+}
+
+.product-group {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--primary-light-gray);
+  .subproducts-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    .subproduct-card-grid {
+      padding: 10px;
+      width: 50%;
+      .subproduct-card {
+        background-color: var(--primary-mid-gray);
+        height: 100%;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        .prod-image {
+          padding: 15px 30px;
+          border-bottom: 1px solid var(--primary-light-gray);
+          img {
+            width: 100%;
+            aspect-ratio: 16 /9;
+          }
+        }
+        .prod-short-desc {
+          padding: 20px;
+          h3 {
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+        }
+        &:hover {
+          box-shadow: 0px 13px 20px rgba(142, 177, 92, 0.2);
+          background-color: rgba(142, 177, 92, 0.3);
+        }
+      }
+    }
+  }
+}
+@media (width>=768px) {
+  .product-group {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .subproducts-row {
+      margin-left: -15px;
+      margin-right: -15px;
+      .subproduct-card-grid {
+        padding: 15px;
+        width: 33.333%;
+        .subproduct-card {
+          border-radius: 20px;
+          .prod-image {
+            padding: 20px 40px;
+          }
+          .prod-short-desc {
+            padding: 24px 32px;
+            h3 {
+              font-size: 24px;
+              margin-bottom: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (width>=1200px) {
+  .product-group {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .subproducts-row {
+      .subproduct-card-grid {
+        padding: 15px;
+        width: 25%;
+        .subproduct-card {
+          border-radius: 22px;
+          .prod-image {
+            padding: 20px 40px;
+          }
+          .prod-short-desc {
+            h3 {
+              font-size: 26px;
+              margin-bottom: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

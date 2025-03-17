@@ -9,6 +9,8 @@
 }
 .embla__viewport {
   overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .embla__container {
   backface-visibility: hidden;
