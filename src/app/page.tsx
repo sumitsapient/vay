@@ -4,6 +4,7 @@ import FeaturedProducts from "@/components/Featured-products/FeaturedProducts";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import HomeBanner from "@/components/HeroBanner/HeroBanner";
+import SocialFloating from "@/components/SocialFloating/SocialFloating";
 import TrendingdProducts from "@/components/TrendingProducts/TrendingProducts";
 
 export default function Home() {

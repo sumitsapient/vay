@@ -42,6 +42,19 @@ function HeaderV2() {
                   <div className="current-menu-title"></div>
                   <div className="mobile-menu-close">&times;</div>
                 </div>
+                <div className="form-block search-container search-container-sm">
+                  <Form className="d-flex position-relative">
+                    <Button variant="outline-success">
+                      <Image src={Search} alt="Search Icon" />
+                    </Button>
+                    <Form.Control
+                      type="search"
+                      placeholder="Search Products"
+                      className="me-2"
+                      aria-label="Search"
+                    />
+                  </Form>
+                </div>
                 <ul className="menu-main">
                   <li>
                     <a href="/">Home</a>
@@ -65,7 +78,7 @@ function HeaderV2() {
             </div>
 
             <div className="header-item item-right">
-              <div className="form-block search-container">
+              <div className="form-block search-container search-container-lg">
                 <Form className="d-flex position-relative">
                   <Button variant="outline-success">
                     <Image src={Search} alt="Search Icon" />

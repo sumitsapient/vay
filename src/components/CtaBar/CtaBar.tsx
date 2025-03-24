@@ -1,8 +1,11 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import Button from "react-bootstrap/Button";
+import InquiryForm from "@/components/InquiryForm/InquiryForm";
 import "./CtaBar.css";
 
 const CtaBar = () => {
+  const [showInquiryForm, setShowInquiryForm] = useState(false);
   return (
     <>
       <section className="section section-cta-bar">
@@ -13,10 +16,18 @@ const CtaBar = () => {
                 <p className="text-white">Have you any Queries?</p>
               </div>
               <div className="col justify-content-end d-flex">
-                <Button variant="secondary" size="lg" className="rounded-pill ">
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="rounded-pill "
+                  onClick={() => setShowInquiryForm(true)}
+                >
                   Contact Us
                 </Button>
               </div>
+              {showInquiryForm && (
+                <InquiryForm onClose={() => setShowInquiryForm(false)} />
+              )}
             </div>
           </div>
         </div>

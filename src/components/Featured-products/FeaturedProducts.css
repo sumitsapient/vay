@@ -18,6 +18,17 @@
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
 }
+section.section.featured-products {
+  padding-top: 50px;
+  .container {
+    position: relative;
+  }
+  .heading-row {
+    position: static;
+    top: 0px;
+    margin-bottom: 0px;
+  }
+}
 @media (min-width: 750px) {
   .embla__container {
     margin-left: calc(var(--slide-spacing-sm) * -1);
@@ -61,7 +72,15 @@
   padding-bottom: 2.5rem;
 }
 @media (width >= 992px) {
-  .heading-row {
-    padding-bottom: 0;
+  section.section.featured-products {
+    padding-top: 100px;
+    .container {
+      position: relative;
+    }
+    .heading-row {
+      position: absolute;
+      top: -30px;
+      margin-bottom: 30px;
+    }
   }
 }

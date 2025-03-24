@@ -2,6 +2,9 @@ import { getBlogBySlug, getAllBlogs } from "@/lib/blogs";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import "./../SingleBlog.css";
+import EditCalendarOutlinedIcon from "@mui/icons-material/EditCalendarOutlined";
+import HistoryEduOutlinedIcon from "@mui/icons-material/HistoryEduOutlined";
 
 interface Blog {
   metadata: {
@@ -31,10 +34,10 @@ export default async function BlogPost({
     <>
       <section className="section blog-wrap">
         <div className="container">
-          <div className="row">
+          <div className="row justify-content-center">
             <div className="col-lg-8">
               <div className="row">
-                <div className="col-lg-12 mb-5">
+                <div className="col-lg-12">
                   <div className="single-blog-item">
                     {blog.metadata.coverImage && (
                       <Image
@@ -45,24 +48,21 @@ export default async function BlogPost({
                         className="cover-image"
                       />
                     )}
-                    <div className="blog-item-content mt-5">
-                      <div className="blog-item-meta mb-3">
-                        <span className="text-muted text-capitalize mr-3">
-                          <i className="icofont-comment mr-2"></i>
-                          {blog.metadata.author}
-                        </span>
-                        <span className="text-black text-capitalize mr-3">
-                          <i className="icofont-calendar mr-2"></i>{" "}
-                          {blog.metadata.date}
-                          2019
-                        </span>
+                    <div className="blog-item-content">
+                      <div className="blog-author-wrapper">
+                        <div className="author">
+                          <HistoryEduOutlinedIcon /> {blog.metadata.author}
+                        </div>
+                        <div className="date">
+                          <EditCalendarOutlinedIcon /> {blog.metadata.date}
+                        </div>
                       </div>
 
-                      <h2 className="mb-4 text-md heading-2">
-                        <a href="blog-single.html">{blog.metadata.title}</a>
+                      <h2 className="mb-4 heading-2 post-title">
+                        {blog.metadata.title}
                       </h2>
 
-                      <p className="lead mb-4">
+                      <p>
                         Non illo quas blanditiis repellendus laboriosam minima
                         animi. Consectetur accusantium pariatur repudiandae!
                       </p>
@@ -81,7 +81,7 @@ export default async function BlogPost({
                         You earn reputation by trying to do hard things well.
                       </blockquote>
 
-                      <p className="lead mb-4 font-weight-normal text-black">
+                      <p>
                         The same is true as we experience the emotional
                         sensation of stress from our first instances of social
                         rejection ridicule. We quickly learn to fear and thus
@@ -100,7 +100,7 @@ export default async function BlogPost({
                 </div>
               </div>
             </div>
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <div className="sidebar-wrap pl-lg-4 mt-5 mt-lg-0">
                 <div className="sidebar-widget search mb-3">
                   <h4>Search Here</h4>
@@ -170,7 +170,7 @@ export default async function BlogPost({
                   <a href="#">Branding</a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
