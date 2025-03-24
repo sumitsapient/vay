@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { getAllBlogs } from "@/lib/blogs";
 import Image from "next/image";
+import EditCalendarOutlinedIcon from "@mui/icons-material/EditCalendarOutlined";
+import HistoryEduOutlinedIcon from "@mui/icons-material/HistoryEduOutlined";
+import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
 import "./SingleBlog.css";
 
 export default async function BlogList() {
@@ -10,44 +13,54 @@ export default async function BlogList() {
     <>
       <section className="section blog-wrap">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-8">
+          <div className="row justify-content-center">
+            <div className="col-lg-9">
               <div className="row">
                 {blogs.map((blog) => (
-                  <div className="col-lg-12 col-md-12 mb-5" key={blog.slug}>
+                  <div className="col-lg-12 col-md-12 mb-4" key={blog.slug}>
                     <div className="blog-item">
-                      <div className="blog-thumb">
-                        {blog.coverImage && (
-                          <Image
-                            src={blog.coverImage}
-                            alt="Cover Image"
-                            width={500}
-                            height={300}
-                            className="cover-image"
-                          />
-                        )}
-                      </div>
+                      <div className="row">
+                        <div className="blog-thumb col-sm-12 col-md-5">
+                          {blog.coverImage && (
+                            <a href={`/blogs/${blog.slug}`}>
+                              <Image
+                                src={blog.coverImage}
+                                alt="Cover Image"
+                                width={500}
+                                height={300}
+                                className="cover-image"
+                              />
+                            </a>
+                          )}
+                        </div>
 
-                      <div className="blog-item-content">
-                        <h1 className="mt-3 mb-3 heading-2">
-                          <a href="blog-single.html">{blog.title}</a>
-                        </h1>
+                        <div className="blog-item-content col-sm-12 col-md-7">
+                          <div className="blog-thumb-desc">
+                            <a
+                              className=" heading-2 post-title"
+                              href={`/blogs/${blog.slug}`}
+                            >
+                              {blog.title}
+                            </a>
 
-                        <p className="mb-4">{blog.excerpt}</p>
-                        <Link
-                          className="btn btn-primary"
-                          href={`/blogs/${blog.slug}`}
-                        >
-                          Read More{" "}
-                          <i className="icofont-simple-right ml-2"></i>
-                        </Link>
+                            <p className="mb-4">{blog.excerpt}</p>
+                          </div>
+                          <div className="blog-author-wrapper">
+                            <div className="author">
+                              <HistoryEduOutlinedIcon /> Nathalie Portmane
+                            </div>
+                            <div className="date">
+                              <EditCalendarOutlinedIcon /> July 19, 2023
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <div className="sidebar-wrap pl-lg-4 mt-5 mt-lg-0">
                 <div className="sidebar-widget search mb-3">
                   <h4>Search Here</h4>
@@ -117,11 +130,11 @@ export default async function BlogList() {
                   <a href="#">Branding</a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
-          <div className="row mt-5">
-            <div className="col-lg-8">
+          <div className="row justify-content-center mt-5">
+            <div className="col-lg-9">
               <nav className="pagination py-2 d-inline-block">
                 <div className="nav-links">
                   <span aria-current="page" className="page-numbers current">
@@ -134,7 +147,7 @@ export default async function BlogList() {
                     3
                   </a>
                   <a className="page-numbers" href="#">
-                    <i className="icofont-thin-double-right"></i>
+                    <ChevronRightOutlinedIcon />
                   </a>
                 </div>
               </nav>
