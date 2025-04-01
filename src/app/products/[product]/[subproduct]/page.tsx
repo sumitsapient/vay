@@ -12,9 +12,7 @@ import {
   usePrevNextButtons,
 } from "../../../../components/CarouselArrow/carousel-arrow";
 import { EmblaOptionsType } from "embla-carousel";
-import Tabs from "react-responsive-tabs";
 import InquiryForm from "@/components/InquiryForm/InquiryForm";
-import "react-responsive-tabs/styles.css";
 import "./ProductPage.css";
 type PropType = {
   slides: number[];
@@ -229,7 +227,7 @@ export default function ProductDetailsPage() {
                 <div className="title-row">
                   <h2 className="heading-2">Product Details</h2>
                 </div>
-                <Tabs items={ProductDetailTab()} showMore={false} />
+//                 <Tabs items={ProductDetailTab()} showMore={false} />
               </div>
             </div>
           </div>
