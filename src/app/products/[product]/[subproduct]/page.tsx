@@ -18,7 +18,7 @@ type PropType = {
   slides: number[];
   options?: EmblaOptionsType;
 };
-const presidents = [
+const description = [
   {
     name: "George Washington",
     biography:
@@ -37,12 +37,12 @@ const presidents = [
   {
     name: "Test test 4",
     biography:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "Contrary to popular belief,  Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
   },
   {
     name: "Test test 5",
     biography:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "Crandom text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
   },
 ];
 
@@ -60,17 +60,6 @@ interface Product {
   description: string;
   image: string;
   subproducts: SubProduct[];
-}
-
-function ProductDetailTab() {
-  return presidents.map((president, index) => ({
-    title: president.name,
-    getContent: () => president.biography,
-    /* Optional parameters */
-    key: index,
-    tabClassName: "tab",
-    panelClassName: "panel",
-  }));
 }
 
 export default function ProductDetailsPage() {
@@ -118,6 +107,74 @@ export default function ProductDetailsPage() {
   }, [product, subproduct]);
 
   if (!productData) return <p>Loading...</p>;
+
+  function ProductDetailTab() {
+    const [activeTab, setActiveTab] = useState(0);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    // Check screen width on resize
+    useEffect(() => {
+      const handleResize = () => setIsMobile(window.innerWidth < 768);
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return (
+      <div className="prodduct-desc-tab">
+        {/* Tabs for Desktop */}
+        {!isMobile ? (
+          <>
+            <ul className="nav nav-tabs">
+              {description.map((desc, index) => (
+                <li className="nav-item" key={index}>
+                  <button
+                    className={`nav-link ${
+                      activeTab === index ? "active" : ""
+                    }`}
+                    onClick={() => setActiveTab(index)}
+                  >
+                    {desc.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <div className="tab-content">
+              <p>{description[activeTab].biography}</p>
+            </div>
+          </>
+        ) : (
+          // Accordion for Mobile
+          <div className="accordion" id="presidentAccordion">
+            {description.map((desc, index) => (
+              <div className="accordion-item" key={index}>
+                <h2 className="accordion-header">
+                  <button
+                    className={`accordion-button ${
+                      activeTab === index ? "" : "collapsed"
+                    }`}
+                    type="button"
+                    onClick={() =>
+                      setActiveTab(activeTab === index ? -1 : index)
+                    }
+                  >
+                    {desc.name}
+                  </button>
+                </h2>
+                <div
+                  className={`accordion-collapse collapse ${
+                    activeTab === index ? "show" : ""
+                  }`}
+                >
+                  <div className="accordion-body">{desc.biography}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <>
@@ -227,7 +284,7 @@ export default function ProductDetailsPage() {
                 <div className="title-row">
                   <h2 className="heading-2">Product Details</h2>
                 </div>
-//                 <Tabs items={ProductDetailTab()} showMore={false} />
+                <ProductDetailTab />
               </div>
             </div>
           </div>
