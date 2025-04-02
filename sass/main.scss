@@ -1,0 +1,28 @@
+$black: #000;
+$white: #fff;
+$primary-black: #070707;
+$primary-light-blue: #add8e6;
+$secondary-light-blue: #f0f8ff;
+$primary-green: #8eb15c;
+$dark-blue: #2962dd;
+
+$primary: $primary-light-blue;
+$secondary: $white;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 3rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}

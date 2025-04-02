@@ -1,13 +1,21 @@
-import ProductCarousel from "@/components/Featured-products/carousel";
-import Header from "@/components/Header/header";
-import HomeBanner from "@/components/Hero-banner/hero-banner";
+import Certification from "@/components/Certification/Certification";
+import CtaBar from "@/components/CtaBar/CtaBar";
+import FeaturedProducts from "@/components/Featured-products/FeaturedProducts";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import HomeBanner from "@/components/HeroBanner/HeroBanner";
+import SocialFloating from "@/components/SocialFloating/SocialFloating";
+import TrendingdProducts from "@/components/TrendingProducts/TrendingProducts";
 
 export default function Home() {
   return (
     <>
-      <Header />
       <HomeBanner />
-      <ProductCarousel />
+      <FeaturedProducts />
+      <CtaBar />
+      <TrendingdProducts />
+      <Certification />
+      <Footer />
     </>
   );
 }

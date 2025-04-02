@@ -1,0 +1,93 @@
+.inquiry-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  h2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+  }
+  p.sub-heading {
+    font-size: 22px;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+    &::after {
+      content: "";
+      height: 8px;
+      width: 30%;
+      border-radius: 8px;
+      background-color: var(--primary-light-blue);
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      transform: translatex(-50%);
+      z-index: -1;
+    }
+  }
+  .form-control {
+    margin-bottom: 15px;
+  }
+}
+
+.modal-content {
+  background: white;
+  padding: 40px 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.modal-close-btn {
+  height: 35px;
+  width: 35px;
+  background-color: var(--primary-dark-gray);
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: -17px;
+  top: -17px;
+}
+@media (width >= 768px) {
+  .modal-content {
+    padding: 40px;
+    width: auto;
+    max-width: 600px;
+    text-align: center;
+  }
+}
+@media (width >=992px) {
+  .inquiry-modal {
+    h2 {
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    p.sub-heading {
+      font-size: 28px;
+      &::after {
+        content: "";
+        height: 12px;
+        bottom: -6px;
+      }
+    }
+    .form-control {
+      margin-bottom: 22px;
+    }
+  }
+  .modal-content form {
+    padding-top: 50px;
+  }
+}

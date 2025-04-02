@@ -1,0 +1,67 @@
+[
+  {
+    "product_id": "VAY-001",
+    "slug": "agriculture",
+    "product_name": "Agriculture & Processed Food",
+    "subproducts": [
+      { "name": "Egg Powder", "slug": "egg-powder" },
+      { "name": "Moringa", "slug": "moringa" },
+      { "name": "Oranges", "slug": "oranges" },
+      { "name": "Aloe Vera", "slug": "aloe-vera" },
+      { "name": "Potato", "slug": "potato" },
+      { "name": "Mulberry Leaf", "slug": "mulberry-leaf" },
+      { "name": "Mango", "slug": "mango" },
+      { "name": "Honey", "slug": "honey" },
+      { "name": "Flowers", "slug": "flowers" },
+      { "name": "Non-Basmati Rice", "slug": "non-basmati-rice" },
+      { "name": "Basmati Rice", "slug": "basmati-rice" }
+    ]
+  },
+  {
+    "product_id": "VAY-002",
+    "slug": "handicrafts",
+    "product_name": "Handicrafts & Decor",
+    "subproducts": [
+      { "name": "Pooja Idols", "slug": "pooja-idols" },
+      { "name": "Wooden Toys", "slug": "wooden-toys" },
+      { "name": "Wood Carvings", "slug": "wood-carvings" },
+      { "name": "Pottery", "slug": "pottery" },
+      { "name": "Stone Carvings", "slug": "stone-carvings" },
+      { "name": "Imitation Jewellery", "slug": "imitation-jewellery" }
+    ]
+  },
+  {
+    "product_id": "VAY-003",
+    "slug": "textiles",
+    "product_name": "Textiles & Fabrics",
+    "subproducts": [
+      { "name": "Silk Sarees", "slug": "silk-sarees" },
+      { "name": "Pashmina Shawls", "slug": "pashmina-shawls" },
+      { "name": "Hand Block-Printed Cotton Fabrics", "slug": "hand-block-printed-cotton-fabrics" },
+      { "name": "Home Textiles", "slug": "home-textiles" },
+      { "name": "Hand-knotted Carpets And Rugs", "slug": "hand-knotted-carpets-and-rugs" }
+    ]
+  },
+  {
+    "product_id": "VAY-004",
+    "slug": "organic",
+    "product_name": "Organic & Herbal Products",
+    "subproducts": [
+      { "name": "Organic And Fair Trade Tea", "slug": "organic-and-fair-trade-tea" },
+      { "name": "Organic And Fair Trade Coffee", "slug": "organic-and-fair-trade-coffee" },
+      { "name": "Essential Oils", "slug": "essential-oils" },
+      { "name": "Gond Katira", "slug": "gond-katira" },
+      { "name": "Coconut Water Powder", "slug": "coconut-water-powder" },
+      { "name": "Oregano Oil", "slug": "oregano-oil" }
+    ]
+  },
+  {
+    "product_id": "VAY-005",
+    "slug": "gems",
+    "product_name": "Gems & Jewellery",
+    "subproducts": [
+      { "name": "Gems And Jewellery", "slug": "gems-and-jewellery" },
+      { "name": "Shellac", "slug": "shellac" }
+    ]
+  }
+]
