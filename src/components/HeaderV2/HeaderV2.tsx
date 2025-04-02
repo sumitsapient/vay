@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
+import Link from "next/link";
 import { Button, Container, Form } from "react-bootstrap";
 import Image from "next/image";
 import Logo from "../../../public/header-logo.svg";
@@ -7,7 +8,25 @@ import Search from "../../../public/search.svg";
 import MegaMenu from "../MegaMenu/MegaMenu";
 import "./HeaderV2.css";
 
+type SubProduct = {
+  name: string;
+  slug: string;
+};
+
+type Category = {
+  slug: string;
+  subproducts: SubProduct[];
+};
+type Product = {
+  name: string;
+  slug: string;
+};
+
 function HeaderV2() {
+const [searchTerm, setSearchTerm] = useState("");
+const [products, setProducts] = useState<Product[]>([]);
+const [filteredResults, setFilteredResults] = useState<Product[]>([]);
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "/scripts/HeaderV2.js";
@@ -19,6 +38,47 @@ function HeaderV2() {
       document.body.removeChild(script);
     };
   }, []);
+useEffect(() => {
+  fetch("/data/mega-menu.json")
+    .then((res) => res.json())
+    .then((data: Category[]) => {
+      const allProducts = data.flatMap((category) =>
+        category.subproducts.map((sub) => ({
+          name: sub.name,
+          slug: `/products/${category.slug}/${sub.slug}`,
+        }))
+      );
+      setProducts(allProducts); // ✅ No more TypeScript error
+    })
+    .catch((error) => console.error("Error fetching products:", error));
+}, []);
+
+
+const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const query = e.target.value.toLowerCase();
+  setSearchTerm(query);
+
+  if (query.length < 2) {
+    setFilteredResults([]);
+    return;
+  }
+
+  const filtered = products.filter((product) =>
+    product.name.toLowerCase().includes(query)
+  );
+
+  setFilteredResults(filtered);
+};
+
+
+const highlightText = (text: string, query: string): string => {
+  if (!query) return text;
+  const regex = new RegExp(`(${query})`, "gi");
+  return text.replace(regex, "<mark>$1</mark>");
+};
+
+
+
   return (
     <>
       <header className="header">
@@ -47,12 +107,34 @@ function HeaderV2() {
                     <Button variant="outline-success">
                       <Image src={Search} alt="Search Icon" />
                     </Button>
-                    <Form.Control
-                      type="search"
-                      placeholder="Search Products"
-                      className="me-2"
-                      aria-label="Search"
-                    />
+                   <Form.Control
+                     type="search"
+                     placeholder="Search Product"
+                     className="me-2"
+                     value={searchTerm}
+                     onChange={handleSearch}
+                   />
+                   {searchTerm.length >= 2 && (
+                     <ul className="search-dropdown">
+                       {filteredResults.length > 0 ? (
+                         filteredResults.map((item, index) => (
+                           <li key={index}>
+                             <Link href={item.slug}>
+                               <span
+                                 dangerouslySetInnerHTML={{
+                                   __html: highlightText(item.name, searchTerm),
+                                 }}
+                               />
+                             </Link>
+                           </li>
+                         ))
+                       ) : (
+                         <li className="no-results">No results found</li>
+                       )}
+                     </ul>
+                   )}
+
+
                   </Form>
                 </div>
                 <ul className="menu-main">
@@ -88,7 +170,29 @@ function HeaderV2() {
                     placeholder="Search Products"
                     className="me-2"
                     aria-label="Search"
+                    value={searchTerm}
+                    onChange={handleSearch}
                   />
+                                     {searchTerm.length >= 2 && (
+                                       <ul className="search-dropdown">
+                                         {filteredResults.length > 0 ? (
+                                           filteredResults.map((item, index) => (
+                                             <li key={index}>
+                                               <Link href={item.slug}>
+                                                 <span
+                                                   dangerouslySetInnerHTML={{
+                                                     __html: highlightText(item.name, searchTerm),
+                                                   }}
+                                                 />
+                                               </Link>
+                                             </li>
+                                           ))
+                                         ) : (
+                                           <li className="no-results">No results found</li>
+                                         )}
+                                       </ul>
+                                     )}
+
                 </Form>
               </div>
               <div className="button-wrapper">
