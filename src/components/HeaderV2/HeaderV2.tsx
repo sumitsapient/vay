@@ -86,7 +86,7 @@ const highlightText = (text: string, query: string): string => {
           <div className="nav-row">
             <div className="header-item item-left">
               <div className="logo navbar-brand">
-                <a href="#">
+                <a href="/">
                   <Image src={Logo} alt="Logo" />
                 </a>
               </div>
@@ -153,7 +153,7 @@ const highlightText = (text: string, query: string): string => {
                     <a href="/blogs">Blog</a>
                   </li>
                   <li>
-                    <a href="#">Contact</a>
+                    <a href="/about">About Us</a>
                   </li>
                 </ul>
               </nav>

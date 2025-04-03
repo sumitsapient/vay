@@ -27,12 +27,12 @@ function HomeBanner() {
                 <div className="col-sm-12 col-md-5 hero-content">
                   <div className="hero-desc">
                     <h1 className="heading-1">
-                      TEXTILE LOREM IPSUM IS OF THE PRINTING
+                      Premium Egg Powder
                     </h1>
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry’s
-                      standard dummy text ever since the 1500s,
+                      Experience the goodness of high-quality egg powder, perfect for baking,
+                       cooking, and food processing. Rich in protein, long shelf life,
+                        and easy to use – an ideal choice for health-conscious and commercial applications.
                     </p>
                   </div>
                   <div className="hero-cta">
@@ -65,11 +65,10 @@ function HomeBanner() {
                 <div className="col-sm-12 col-md-5 hero-content">
                   <div className="hero-desc">
                     <h1 className="heading-1">
-                      LOREM IPSUM IS OF THE PRINTING
+                      Pure Beans, Perfect Brew
                     </h1>
                     <p>
-                      Dummy text of the printing and Lorem Ipsum has been the
-                      industry’s standard dummy text ever since the 1500s,
+                      Sourced from the finest coffee plantations, our expertly roasted beans deliver a smooth, full-bodied taste in every cup.
                     </p>
                   </div>
                   <div className="hero-cta">
@@ -102,11 +101,10 @@ function HomeBanner() {
                 <div className="col-sm-12 col-md-5 hero-content">
                   <div className="hero-desc">
                     <h1 className="heading-1">
-                      LOREM IPSUM IS OF THE PRINTING
+                      Handpicked Tea Leaves
                     </h1>
                     <p>
-                      Dummy text of the printing and Lorem Ipsum has been the
-                      industry’s standard dummy text ever since the 1500s,
+                      Discover the essence of purity with our premium tea collection. Sourced from the finest tea gardens, our blends are rich in aroma, flavor, and tradition.🍵
                     </p>
                   </div>
                   <div className="hero-cta">

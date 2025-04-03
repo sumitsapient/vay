@@ -13,7 +13,7 @@ const CtaBar = () => {
           <div className="cta-bar">
             <div className="row">
               <div className="col justify-content-start align-items-center d-flex">
-                <p className="text-white">Have you any Queries?</p>
+                <p className="text-white">✉️ Contact Us Today!</p>
               </div>
               <div className="col justify-content-end d-flex">
                 <Button

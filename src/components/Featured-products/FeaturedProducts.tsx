@@ -35,7 +35,7 @@ const FeaturedProducts = () => {
         <div className="row heading-row">
           <div className="col-lg-12">
             <h2 className="heading-2">FEATURED PRODUCTS</h2>
-            <p>Meet Our Handpicked Favorites</p>
+            <p><i className="fa fa-heart" style={{ color: "red" }}></i> Meet Our Handpicked Favorites</p>
           </div>
         </div>
         <div className="row">

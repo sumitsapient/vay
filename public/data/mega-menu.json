@@ -1,7 +1,7 @@
 [
   {
     "product_id": "VAY-001",
-    "slug": "agriculture",
+    "slug": "agriculture-processed-food",
     "product_name": "Agriculture & Processed Food",
     "subproducts": [
       { "name": "Egg Powder", "slug": "egg-powder" },
@@ -19,7 +19,7 @@
   },
   {
     "product_id": "VAY-002",
-    "slug": "handicrafts",
+    "slug": "handicrafts-and-decor",
     "product_name": "Handicrafts & Decor",
     "subproducts": [
       { "name": "Pooja Idols", "slug": "pooja-idols" },
@@ -32,7 +32,7 @@
   },
   {
     "product_id": "VAY-003",
-    "slug": "textiles",
+    "slug": "textiles-and-fabrics",
     "product_name": "Textiles & Fabrics",
     "subproducts": [
       { "name": "Silk Sarees", "slug": "silk-sarees" },
@@ -44,7 +44,7 @@
   },
   {
     "product_id": "VAY-004",
-    "slug": "organic",
+    "slug": "organic-and-herbal-products",
     "product_name": "Organic & Herbal Products",
     "subproducts": [
       { "name": "Organic And Fair Trade Tea", "slug": "organic-and-fair-trade-tea" },
@@ -57,7 +57,7 @@
   },
   {
     "product_id": "VAY-005",
-    "slug": "gems",
+    "slug": "gems-and-jewellery",
     "product_name": "Gems & Jewellery",
     "subproducts": [
       { "name": "Gems And Jewellery", "slug": "gems-and-jewellery" },

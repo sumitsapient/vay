@@ -1,140 +1,253 @@
 {
-  "egg-powder": {
-    "product_name": "EGG POWDER",
-    "slug": "egg-powder",
+  "agriculture": {
+    "product_name": "Agriculture & Processed Food",
+    "slug": "agriculture-processed-food",
     "description": "Detailed description here...",
     "image": "https://example.com/images/egg-powder.jpg",
     "subproducts": [
       {
-        "name": "Whole Egg Powder",
-        "slug": "whole-egg-powder",
+        "name": "Egg Powder",
+        "slug": "egg-powder",
         "short_description": "Description here...",
-        "image": "https://example.com/images/whole-egg.jpg",
+        "image": "https://example.com/images/egg-powder.jpg",
         "tag": "Eco-friendly"
       },
       {
-        "name": "Egg Whites Powder",
-        "slug": "egg-whites-powder",
+        "name": "Moringa",
+        "slug": "moringa",
         "short_description": "Description here...",
-        "image": "https://example.com/images/whole-egg.jpg",
+        "image": "https://example.com/images/moringa.jpg",
         "tag": "Eco-friendly"
       },
       {
-        "name": "Egg Yolk Powder",
-        "slug": "egg-yolk-powder",
+        "name": "Oranges",
+        "slug": "oranges",
         "short_description": "Description here...",
-        "image": "https://example.com/images/whole-egg.jpg",
+        "image": "https://example.com/images/oranges.jpg",
         "tag": "Eco-friendly"
       },
       {
-        "name": "Egg Shells Powder",
-        "slug": "egg-shells-powder",
+        "name": "Aloe Vera",
+        "slug": "aloe-vera",
         "short_description": "Description here...",
-        "image": "https://example.com/images/whole-egg.jpg",
+        "image": "https://example.com/images/aloe-vera.jpg",
+        "tag": "Eco-friendly"
+      },
+      {
+        "name": "Potato",
+        "slug": "potato",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/potato.jpg",
+        "tag": "Eco-friendly"
+      },
+      {
+        "name": "Mulberry Leaf",
+        "slug": "mulberry-leaf",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/mulberry-leaf.jpg",
+        "tag": "Eco-friendly"
+      },
+      {
+        "name": "Mango",
+        "slug": "mango",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/mango.jpg",
+        "tag": "Eco-friendly"
+      },
+      {
+        "name": "Honey",
+        "slug": "honey",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/honey.jpg",
+        "tag": "Eco-friendly"
+      },
+      {
+        "name": "Flowers",
+        "slug": "flowers",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/flowers.jpg",
+        "tag": "Eco-friendly"
+      },
+      {
+        "name": "Non-Basmati Rice",
+        "slug": "non-basmati-rice",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/non-basmati-rice.jpg",
+        "tag": "Eco-friendly"
+      },
+      {
+        "name": "Basmati Rice",
+        "slug": "basmati-rice",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/basmati-rice.jpg",
         "tag": "Eco-friendly"
       }
     ]
   },
-  "tea": {
-    "product_name": "TEA",
-    "slug": "tea",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-    "image": "https://example.com/images/tea.jpg",
+  "handicrafts": {
+    "product_name": "Handicrafts & Decor",
+    "slug": "handicrafts-and-decor",
+    "description": "Detailed description here...",
+    "image": "https://example.com/images/handicrafts.jpg",
     "subproducts": [
       {
-        "name": "Black Tea",
-        "slug": "black-tea",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
-        "tag": "Eco-friendly"
+        "name": "Pooja Idols",
+        "slug": "pooja-idols",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/pooja-idols.jpg",
+        "tag": "Handcrafted"
       },
       {
-        "name": "Green Tea",
-        "slug": "green-tea",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
-        "tag": "Eco-friendly"
+        "name": "Wooden Toys",
+        "slug": "wooden-toys",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/wooden-toys.jpg",
+        "tag": "Handcrafted"
       },
       {
-        "name": "Oolong",
-        "slug": "oolong",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
-        "tag": "Eco-friendly"
+        "name": "Wood Carvings",
+        "slug": "wood-carvings",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/wood-carvings.jpg",
+        "tag": "Handcrafted"
       },
       {
-        "name": "Masala",
-        "slug": "masala",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
-        "tag": "Eco-friendly"
+        "name": "Pottery",
+        "slug": "pottery",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/pottery.jpg",
+        "tag": "Handcrafted"
       },
       {
-        "name": "CTC(cut, tear, curl)",
-        "slug": "ctc",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
-        "tag": "Eco-friendly"
+        "name": "Stone Carvings",
+        "slug": "stone-carvings",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/stone-carvings.jpg",
+        "tag": "Handcrafted"
       },
       {
-        "name": "White Tea",
-        "slug": "white-tea",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
-        "tag": "Eco-friendly"
+        "name": "Imitation Jewellery",
+        "slug": "imitation-jewellery",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/imitation-jewellery.jpg",
+        "tag": "Handcrafted"
       }
     ]
   },
-  "coffee": {
-    "product_name": "COFFEE",
-    "slug": "coffee",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-    "image": "https://example.com/images/tea.jpg",
+  "textiles": {
+    "product_name": "Textiles & Fabrics",
+    "slug": "textiles-and-fabrics",
+    "description": "Detailed description here...",
+    "image": "https://example.com/images/textile-and-fabric.jpg",
     "subproducts": [
       {
-        "name": "Arabica",
-        "slug": "arabica",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
+        "name": "Silk Sarees",
+        "slug": "silk-sarees",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/silk-sarees.jpg",
+        "tag": "Premium"
+      },
+      {
+        "name": "Pashmina Shawls",
+        "slug": "pashmina-shawls",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/pashmina-shawls.jpg",
+        "tag": "Luxury"
+      },
+      {
+        "name": "Hand Block-Printed Cotton Fabrics",
+        "slug": "hand-block-printed-cotton-fabrics",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/hand-block-printed-cotton-fabrics.jpg",
+        "tag": "Traditional"
+      },
+      {
+        "name": "Home Textiles",
+        "slug": "home-textiles",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/home-textiles.jpg",
         "tag": "Eco-friendly"
       },
       {
-        "name": "Robusta",
-        "slug": "robusta",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
-        "tag": "Eco-friendly"
+        "name": "Hand-knotted Carpets And Rugs",
+        "slug": "hand-knotted-carpets-and-rugs",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/hand-knotted-carpets-and-rugs.jpg",
+        "tag": "Artisan"
+      }
+    ]
+  },
+  "organic": {
+    "product_name": "Organic & Herbal Products",
+    "slug": "organic-and-herbal-products",
+    "description": "Detailed description here...",
+    "image": "https://example.com/images/organic-and-herbal-products.jpg",
+    "subproducts": [
+      {
+        "name": "Organic And Fair Trade Tea",
+        "slug": "organic-and-fair-trade-tea",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/organic-and-fair-trade-tea.jpg",
+        "tag": "Fair Trade"
       },
       {
-        "name": "Green Coffee Beans",
-        "slug": "green-coffee-beans",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
-        "tag": "Eco-friendly"
+        "name": "Organic And Fair Trade Coffee",
+        "slug": "organic-and-fair-trade-coffee",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/organic-and-fair-trade-coffee.jpg",
+        "tag": "Fair Trade"
       },
       {
-        "name": "Roasted Coffee Beans",
-        "slug": "roasted-coffee-beans",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
-        "tag": "Eco-friendly"
+        "name": "Essential Oils",
+        "slug": "essential-oils",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/essential-oils.jpg",
+        "tag": "Natural"
       },
       {
-        "name": "Instant Coffee",
-        "slug": "instant-coffee",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
-        "tag": "Eco-friendly"
+        "name": "Gond Katira",
+        "slug": "gond-katira",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/gond-katira.jpg",
+        "tag": "Herbal"
       },
       {
-        "name": "Liberica",
-        "slug": "liberica",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "image": "https://example.com/images/green-tea.jpg",
-        "tag": "Eco-friendly"
+        "name": "Coconut Water Powder",
+        "slug": "coconut-water-powder",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/coconut-water-powder.jpg",
+        "tag": "Organic"
+      },
+      {
+        "name": "Oregano Oil",
+        "slug": "oregano-oil",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/oregano-oil.jpg",
+        "tag": "Natural"
+      }
+    ]
+  },
+  "gems": {
+    "product_name": "Gems & Jewellery",
+    "slug": "gems-and-jewellery",
+    "description": "Detailed description here...",
+    "image": "https://example.com/images/gems-and-jewellery.jpg",
+    "subproducts": [
+      {
+        "name": "Gems And Jewellery",
+        "slug": "gems-and-jewellery",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/gems-and-jewellery.jpg",
+        "tag": "Luxury"
+      },
+      {
+        "name": "Shellac",
+        "slug": "shellac",
+        "short_description": "Description here...",
+        "image": "https://example.com/images/shellac.jpg",
+        "tag": "Natural"
       }
     ]
   }
 }
 
-  

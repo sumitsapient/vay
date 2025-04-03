@@ -14,8 +14,7 @@ function Certification() {
           <div className="col-lg-12">
             <h2 className="heading-2">CERTIFICATION</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+            📜  We adhere to global quality standards for trusted export solutions.
             </p>
           </div>
         </div>
