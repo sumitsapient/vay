@@ -1,8 +1,8 @@
 footer {
   background-color: var(--primary-light-blue);
-  padding-top: 100px;
+  padding-top: 40px;
 }
-footer h3 {
+footer h3.footer-title {
   font-size: 16px;
   margin-bottom: 12px;
 }
@@ -22,8 +22,22 @@ footer .footer-cols ul {
   padding: 0;
 }
 footer .footer-cols ul li {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  svg {
+    height: 18px;
+    width: 18px;
+    margin: 5px;
+    path {
+      fill: var(--black);
+    }
+  }
+  .fa {
+    height: 18px;
+    width: 18px;
+    margin: 5px;
+    font-size: 18px;
+  }
 }
 footer .footer-cols ul li a {
   color: var(--black);
@@ -46,18 +60,26 @@ footer .footer-cols ul li a:hover {
 }
 
 @media (width >= 768px) {
-  footer h3 {
-    font-size: 18px;
+  footer h3.footer-title {
+    font-size: 16px;
     margin-bottom: 18px;
   }
 }
 @media (width >= 1200px) {
-  footer h3 {
+  footer h3.footer-title {
     font-size: 20px;
     margin-bottom: 20px;
   }
   footer p {
     font-size: 14px;
     line-height: 20px;
+  }
+  footer .footer-cols ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  footer .footer-cols ul li a {
+    font-size: 14px;
+    line-height: 18px;
   }
 }

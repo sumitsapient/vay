@@ -10,6 +10,9 @@
   box-shadow: 0px 6px 8px #2962dd14;
   border-radius: 0px 0px 20px 20px;
   height: 100%;
+  border-left: 1px solid var(--primary-light-gray);
+  border-right: 1px solid var(--primary-light-gray);
+  border-bottom: 1px solid var(--primary-light-gray);
 }
 .trending-card .card-body {
   display: flex;
@@ -17,6 +20,7 @@
 }
 .trending-card .card-title.heading-3 {
   font-weight: 400;
+  font-size: 20px;
 }
 .trending-card .prod-desc {
   font-weight: 300;
@@ -70,6 +74,9 @@
   }
   .trending-card .prod-desc {
     line-height: 26px;
+  }
+  .trending-card .card-title.heading-3 {
+    font-size: 23px;
   }
 }
 

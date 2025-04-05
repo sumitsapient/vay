@@ -37,9 +37,15 @@
     "subproducts": [
       { "name": "Silk Sarees", "slug": "silk-sarees" },
       { "name": "Pashmina Shawls", "slug": "pashmina-shawls" },
-      { "name": "Hand Block-Printed Cotton Fabrics", "slug": "hand-block-printed-cotton-fabrics" },
+      {
+        "name": "Hand Block-Printed Cotton Fabrics",
+        "slug": "hand-block-printed-cotton-fabrics"
+      },
       { "name": "Home Textiles", "slug": "home-textiles" },
-      { "name": "Hand-knotted Carpets And Rugs", "slug": "hand-knotted-carpets-and-rugs" }
+      {
+        "name": "Hand-knotted Carpets And Rugs",
+        "slug": "hand-knotted-carpets-and-rugs"
+      }
     ]
   },
   {
@@ -47,8 +53,14 @@
     "slug": "organic-and-herbal-products",
     "product_name": "Organic & Herbal Products",
     "subproducts": [
-      { "name": "Organic And Fair Trade Tea", "slug": "organic-and-fair-trade-tea" },
-      { "name": "Organic And Fair Trade Coffee", "slug": "organic-and-fair-trade-coffee" },
+      {
+        "name": "Organic And Fair Trade Tea",
+        "slug": "organic-and-fair-trade-tea"
+      },
+      {
+        "name": "Organic And Fair Trade Coffee",
+        "slug": "organic-and-fair-trade-coffee"
+      },
       { "name": "Essential Oils", "slug": "essential-oils" },
       { "name": "Gond Katira", "slug": "gond-katira" },
       { "name": "Coconut Water Powder", "slug": "coconut-water-powder" },

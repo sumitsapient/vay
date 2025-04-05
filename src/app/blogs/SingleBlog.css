@@ -486,7 +486,7 @@
 .blog-wrap .cover-image {
   width: 100%;
   height: auto;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 3 / 2;
   border-radius: 12px;
 }
 .blog-author-wrapper {
@@ -526,7 +526,7 @@
     flex-direction: column;
     justify-content: space-between;
     .post-title {
-      font-size: 36px;
+      font-size: 28px;
       font-weight: 500;
       margin-top: 0;
       margin-bottom: 22px;
