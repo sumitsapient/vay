@@ -17,7 +17,8 @@ ul.filter-section {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 12px;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 ul.filter-section li {
   display: inline-block;
@@ -29,6 +30,7 @@ ul.filter-section li label {
   border: 2px solid var(--primary-light-gray);
   color: var(--primary-dark-gray);
   border-radius: 25px;
+  font-size: 12px;
   white-space: nowrap;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -37,26 +39,30 @@ ul.filter-section li label {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   transition: all 0.2s;
-  height: 52px;
-  padding: 0 18px;
+  height: 28px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   gap: 8px;
+  @media (width >=992px) {
+    height: 36px;
+    font-size: 14px;
+  }
 }
 
 ul.filter-section li label::before {
-  height: 24px;
-  width: 24px;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%231f1f1f"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>');
+  height: 18px;
+  width: 18px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="%231f1f1f"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>');
   content: "";
   transition: transform 0.3s ease-in-out;
 }
 
 ul.filter-section li input[type="checkbox"]:checked + label::before {
   content: "";
-  height: 24px;
-  width: 24px;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>');
+  height: 18px;
+  width: 18px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="white"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>');
   transition: transform 0.3s ease-in-out;
 }
 

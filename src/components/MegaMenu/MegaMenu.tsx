@@ -17,23 +17,46 @@ interface ProductCategory {
 
 export default function MegaMenu() {
   const [menuData, setMenuData] = useState<ProductCategory[]>([]);
-
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleAccordion = (product_id: number) => {
     setOpenIndex(openIndex === product_id ? null : product_id);
   };
 
+  // Fetch menu data
   useEffect(() => {
-    fetch("/data/mega-menu.json") // Fetching MegaMenu JSON
+    fetch("/data/mega-menu.json")
       .then((res) => res.json())
       .then((data: ProductCategory[]) => setMenuData(data))
       .catch((error) => console.error("Error fetching MegaMenu data:", error));
   }, []);
 
+  // Add dynamic class based on number of categories
+  useEffect(() => {
+    if (menuData.length === 0) return;
+
+    const megaMenuRow = document.getElementById("mega-menu-row");
+    if (!megaMenuRow) return;
+
+    const categories = megaMenuRow.querySelectorAll(".mega-menu-category");
+    const categoryCount = categories.length;
+
+    console.log(`Number of mega-menu-category divs: ${categoryCount}`);
+
+    if ([3, 5, 6, 9].includes(categoryCount)) {
+      categories.forEach((category) => {
+        category.classList.add("col-lg-4");
+      });
+    } else if (categoryCount === 2) {
+      categories.forEach((category) => {
+        category.classList.add("col-lg-6");
+      });
+    }
+  }, [menuData]); // Run after menuData is loaded
+
   return (
     <div className="mega-menu">
-      <div className="row">
+      <div className="row" id="mega-menu-row">
         {menuData.map((category, product_id) => (
           <div
             key={product_id}

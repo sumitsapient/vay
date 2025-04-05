@@ -2,6 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import Logo from "../../../public/header-logo.svg";
+import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import "./Footer.css";
 
 function Footer() {
@@ -12,19 +15,27 @@ function Footer() {
           <div className="col-md-3">
             <div className="footer-cols">
               <h3 className="footer-title">Company</h3>
-              <p>   VAY EXIM LLP</p>
-              <p>🌏 Mumbai | Bengaluru </p>
-              <p>📧 contact@eximvay.com</p>
-              <p>📞 +918591362338</p>
+              <p className="fs-6"> VAY EXIM LLP</p>
+              <ul>
+                <li>
+                  <MapOutlinedIcon /> Mumbai | Bengaluru{" "}
+                </li>
+                <li>
+                  <EmailOutlinedIcon /> contact@eximvay.com
+                </li>
+                <li>
+                  <LocalPhoneOutlinedIcon /> +918591362338
+                </li>
+              </ul>
             </div>
           </div>
           <div className="col-md-3">
             <div className="footer-cols">
               <h3 className="footer-title">Know More</h3>
               <ul>
-              <li>
+                <li>
                   <a href="/">Home</a>
-                  </li>
+                </li>
                 <li>
                   <a href="/products/listing">Products</a>
                 </li>
@@ -40,15 +51,31 @@ function Footer() {
           <div className="col-md-3">
             <div className="footer-cols">
               <h3 className="footer-title">Connect with us</h3>
-              <p><a href="mailto:contact@eximvay.com" target="_blank" rel="noopener noreferrer">
-                           📧 Email Us
-                         </a></p>
-              <p><a href="tel:+918591362338">
-                           📞 Call Us
-                         </a></p>
-              <p><a href="https://wa.me/918591362338" target="_blank" rel="noopener noreferrer">
-                           <i className="fa fa-whatsapp"></i> WhatsApp
-                         </a></p>
+              <ul>
+                <li>
+                  <a
+                    href="mailto:contact@eximvay.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <EmailOutlinedIcon /> Email Us
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+918591362338">
+                    <LocalPhoneOutlinedIcon /> Call Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/918591362338"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa fa-whatsapp"></i> WhatsApp
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="col-md-3">

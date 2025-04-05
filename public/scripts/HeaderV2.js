@@ -55,3 +55,18 @@ window.onresize = function () {
     }
   }
 };
+
+const megaMenuRow = document.getElementById("mega-menu-row");
+const categories = megaMenuRow.querySelectorAll(".mega-menu-category");
+const categoryCount = categories.length;
+
+console.log(`Number of mega-menu-category divs: ${categoryCount}`);
+if ([3, 5, 6, 9].includes(categoryCount)) {
+  categories.forEach((category) => {
+    category.classList.add("col-lg-4");
+  });
+} else if (categoryCount === 2) {
+  categories.forEach((category) => {
+    category.classList.add("col-lg-6");
+  });
+}
