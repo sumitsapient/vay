@@ -11,6 +11,8 @@ interface Product {
   tag: string;
   slug: string;
   trending: boolean; // Ensure this field exists in your JSON data
+  category: string;
+  name: string;
 }
 
 function TrendingCard() {

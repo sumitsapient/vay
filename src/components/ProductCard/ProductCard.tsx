@@ -8,6 +8,9 @@ interface ProductCategory {
   product_name: string;
   image?: string; // Optional in case an image is missing
   featured: boolean; // Added featured field
+  slug: string;
+  category: string;
+  name: string;
 }
 
 function ProductCard() {

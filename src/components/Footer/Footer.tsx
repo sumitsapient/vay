@@ -90,7 +90,7 @@ function Footer() {
         </div>
       </div>
       <div className="copyright-row">
-        <p>Coyright © 2024 VAY. All rights reserved.</p>
+        <p>Coyright © 2025 VAY. All rights reserved.</p>
       </div>
     </footer>
   );
