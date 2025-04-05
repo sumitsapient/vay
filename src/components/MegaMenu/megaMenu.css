@@ -33,7 +33,10 @@
   transform: translateY(-50%) rotate(315deg);
 }
 @media (width>= 992px) {
-  .acc-sub-title {
+  .header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item .title {
+    font-size: 18px;
+  }
+  .mega-menu-category h4.acc-sub-title.title {
     border-top: none;
     cursor: pointer;
     position: inherit;

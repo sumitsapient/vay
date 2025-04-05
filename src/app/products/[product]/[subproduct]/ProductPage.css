@@ -46,6 +46,7 @@
 .product-full-detail {
   background: #ffffff;
   box-shadow: 0px 15px 26px #2962dd14;
+  border: 1px solid var(--primary-light-gray);
   border-radius: 0px 0px 20px 20px;
   h2 {
     font-size: 24px;
@@ -191,10 +192,10 @@
 .related-product-card {
   padding: 16px;
   background-color: var(--white);
+  border-left: 1px solid var(--primary-light-gray);
+  border-right: 1px solid var(--primary-light-gray);
+  border-bottom: 1px solid var(--primary-light-gray);
   border-top: 3px solid var(--dark-blue);
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
   box-shadow: 0px 6px 8px #2962dd14;
   border-radius: 0px 0px 20px 20px;
   height: 100%;
@@ -269,6 +270,7 @@
 }
 .related-carousel .embla__dots {
   justify-content: center;
+  padding-top: 20px;
 }
 .related-carousel .embla__button:disabled svg path {
   fill: var(--primary-light-gray);

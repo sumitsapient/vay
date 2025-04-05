@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import "./inquiryForm.css";
 
 interface InquiryFormProps {
-  productName?: string | string[]; // Handle possible array type
-  onClose: () => void; // Function to close modal
+  productName?: string | string[];
+  onClose: () => void;
 }
 
 const InquiryForm: React.FC<InquiryFormProps> = ({ productName, onClose }) => {
@@ -16,7 +16,9 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ productName, onClose }) => {
     product: "",
   });
 
-  // Ensure product is always a string
+  const [isLoading, setIsLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
+
   useEffect(() => {
     setFormData((prev) => ({
       ...prev,
@@ -34,9 +36,12 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ productName, onClose }) => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
-      alert("Please fill all required fields!");
+      setResponseMessage("⚠️ Please fill all required fields!");
       return;
     }
+
+    setIsLoading(true);
+    setResponseMessage("");
 
     try {
       const response = await fetch("/api/send-inquiry", {
@@ -48,15 +53,25 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ productName, onClose }) => {
       const result = await response.json();
 
       if (response.ok) {
-        alert("Your inquiry has been sent!");
-        onClose();
+        setResponseMessage("✅ Your inquiry has been sent successfully!");
+
+        // Auto-close modal after 2 seconds
+        setTimeout(() => {
+          onClose();
+        }, 2000);
       } else {
         console.error("Error sending inquiry:", result);
-        alert("Error sending inquiry. Please try again.");
+        setResponseMessage(
+          "❌ Something went wrong. Please email us at contact@eximvay.com."
+        );
       }
     } catch (error) {
       console.error("Network error:", error);
-      alert("Network error. Please try again.");
+      setResponseMessage(
+        "❌ Network error. Please email us at contact@eximvay.com."
+      );
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -64,7 +79,7 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ productName, onClose }) => {
     <div className="inquiry-modal">
       <div className="modal-content">
         <div className="modal-close-btn" onClick={onClose}>
-          <img src="/modal-close-icon.svg" />
+          <img src="/modal-close-icon.svg" alt="Close" />
         </div>
         <h2>Contact Us</h2>
         <p className="sub-heading">Send Us a Message</p>
@@ -127,10 +142,21 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ productName, onClose }) => {
               />
             </div>
           </div>
+          {responseMessage && (
+            <div className="row">
+              <div className="col-md-12">
+                <p className="response-message">{responseMessage}</p>
+              </div>
+            </div>
+          )}
           <div className="row">
             <div className="col-md-12 justify-content-center">
-              <button className="btn btn-primary" type="submit">
-                Send Inquiry
+              <button
+                className="btn btn-primary"
+                type="submit"
+                disabled={isLoading}
+              >
+                {isLoading ? "Sending..." : "Send Inquiry"}
               </button>
             </div>
           </div>

@@ -34,10 +34,9 @@ const TrendingdProducts = () => {
       <div className="container">
         <div className="row heading-row">
           <div className="col-lg-12 text-center">
-            <h2 className="heading-2">Trending Products</h2>
+            <h2 className="heading-2">TRENDING PRODUCTS</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+            🔥  Discover the most popular and in-demand products of the season.
             </p>
           </div>
         </div>

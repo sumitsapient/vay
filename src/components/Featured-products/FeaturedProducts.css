@@ -9,7 +9,7 @@
 }
 .embla__viewport {
   overflow: hidden;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 20px;
 }
 .embla__container {
@@ -37,6 +37,9 @@ section.section.featured-products {
 @media (min-width: 1200px) {
   .embla__container {
     margin-left: calc(var(--slide-spacing-lg) * -1);
+  }
+  .embla__viewport {
+    padding-top: 40px;
   }
 }
 .embla__slide {

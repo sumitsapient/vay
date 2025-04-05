@@ -8,6 +8,36 @@
 .search-container {
   position: relative;
   display: none;
+  .search-dropdown {
+    position: absolute;
+    right: 0;
+    max-height: 300px;
+    top: 50%;
+    left: 0px;
+    z-index: 2;
+    background-color: #f7f8fa;
+    border: 2px solid var(--light-gray-bg);
+    padding-top: 24px;
+
+    li {
+      padding: 12px;
+      border-bottom: 1px solid #f1f1f1;
+      transition: all 0.2s linear;
+      cursor: pointer;
+      a {
+        font-size: 14px;
+        color: var(--primary-dark-gray);
+      }
+      &:hover {
+        background-color: #f1f1f1;
+      }
+      span mark {
+        color: var(--primary-black);
+        font-weight: 500;
+        background-color: inherit;
+      }
+    }
+  }
 }
 .search-suggestions {
   position: absolute;
@@ -74,9 +104,15 @@
 }
 .header .form-block .form-control {
   height: 44px;
+  padding-left: 0;
   border-radius: 0 22px 22px 0;
   border: none;
   background-color: #f7f8fa;
+  position: relative;
+  z-index: 3;
+  &:focus {
+    box-shadow: inherit;
+  }
 }
 .header .form-block .btn-outline-success {
   height: 44px;
@@ -86,15 +122,8 @@
   display: flex;
   align-items: center;
   position: relative;
-}
-.header .form-block .btn-outline-success::after {
-  content: "";
-  width: 1px;
-  height: 20px;
-  background-color: var(--black);
-  position: absolute;
-  right: 0;
-  top: 12px;
+  z-index: 3;
+  padding: 8px 16px;
 }
 .header .navbar-collapse {
   padding: 14px 24px 24px;
@@ -151,23 +180,6 @@
     height: 44px;
     border-radius: 0 22px 22px 0;
     border: none;
-  }
-  .header .form-block .btn-outline-success {
-    height: 44px;
-    border-radius: 22px 0 0 22px;
-    border: none;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  .header .form-block .btn-outline-success::after {
-    content: "";
-    width: 1px;
-    height: 20px;
-    background-color: var(--black);
-    position: absolute;
-    right: 0;
-    top: 12px;
   }
   .header .navbar-collapse {
     display: flex;
@@ -519,6 +531,7 @@
     display: none;
     transform: translateX(0%);
     overflow-y: auto;
+    z-index: 1;
   }
   .header .menu > ul > li .sub-menu.active {
     display: block;

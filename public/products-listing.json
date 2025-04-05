@@ -1,115 +1,132 @@
 [
-    {
-      "product_id": "VAY-001",
-      "product_name": "INDIAN FESTIVE CLOTHING",
-      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-      "image": "https://example.com/images/tea.jpg",
-      "tag": "Organic"
-    },
-    {
-      "product_id": "VAY-002",
-      "product_name": "EGG POWDER",
-      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-      "image": "https://example.com/images/tea.jpg",
-      "tag": "Organic"
-    },
-    {
-        "product_id": "VAY-003",
-        "product_name": "TEA",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      },
-      {
-        "product_id": "VAY-004",
-        "product_name": "COFFEE",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      },
-      {
-        "product_id": "VAY-005",
-        "product_name": "HANDICRAFTS",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      },
-      {
-        "product_id": "VAY-006",
-        "product_name": "FRUITS AND VEGETABLES",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      },
-      {
-        "product_id": "VAY-007",
-        "product_name": "TEXTILES",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      }, 
-      {
-        "product_id": "VAY-008",
-        "product_name": "OILS",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      },
-      {
-        "product_id": "VAY-009",
-        "product_name": "JUICE POEDERS",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      }, 
-      {
-        "product_id": "VAY-0010",
-        "product_name": "AYURVEDIC",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      },
-      {
-        "product_id": "VAY-0011",
-        "product_name": "EXOTIC",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      },
-      {
-        "product_id": "VAY-0012",
-        "product_name": "LAC",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      },
-      {
-        "product_id": "VAY-0013",
-        "product_name": "ALOE VERA",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      },
-      {
-        "product_id": "VAY-0014",
-        "product_name": "CARPETS",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      },
-      {
-        "product_id": "VAY-0015",
-        "product_name": "HOP SHOOTS",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      },
-      {
-        "product_id": "VAY-0016",
-        "product_name": "SOAP",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
-        "image": "https://example.com/images/tea.jpg",
-        "tag": "Organic"
-      }         
-  ]
-  
+  {
+    "name": "Silk Sarees",
+    "slug": "silk-sarees",
+    "category":"textiles-and-fabrics",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/silk-sarees.jpg",
+    "tag": "Premium",
+    "trending": true,
+    "featured": false
+  },
+  {
+    "name": "Pashmina Shawls",
+    "slug": "pashmina-shawls",
+    "category":"textiles-and-fabrics",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/pashmina-shawls.jpg",
+    "tag": "Luxury",
+    "trending": false,
+    "featured": true
+  },
+  {
+    "name": "Hand Block-Printed Cotton Fabrics",
+    "slug": "hand-block-printed-cotton-fabrics",
+    "category":"textiles-and-fabrics",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/hand-block-printed-cotton-fabrics.jpg",
+    "tag": "Traditional",
+    "trending": false,
+    "featured": false
+  },
+  {
+    "name": "Home Textiles",
+    "slug": "home-textiles",
+    "category":"textiles-and-fabrics",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/home-textiles.jpg",
+    "tag": "Eco-friendly",
+    "trending": true,
+    "featured": true
+  },
+  {
+    "name": "Hand-knotted Carpets And Rugs",
+    "slug": "hand-knotted-carpets-and-rugs",
+    "category":"textiles-and-fabrics",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/hand-knotted-carpets-and-rugs.jpg",
+    "tag": "Artisan",
+    "trending": false,
+    "featured": false
+  },
+  {
+    "name": "Organic And Fair Trade Tea",
+    "slug": "organic-and-fair-trade-tea",
+    "category":"organic-and-herbal-products",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/organic-and-fair-trade-tea.jpg",
+    "tag": "Fair Trade",
+    "trending": true,
+    "featured": false
+  },
+  {
+    "name": "Organic And Fair Trade Coffee",
+    "slug": "organic-and-fair-trade-coffee",
+    "category":"organic-and-herbal-products",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/organic-and-fair-trade-coffee.jpg",
+    "tag": "Fair Trade",
+    "trending": false,
+    "featured": true
+  },
+  {
+    "name": "Essential Oils",
+    "slug": "essential-oils",
+    "category":"organic-and-herbal-products",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/essential-oils.jpg",
+    "tag": "Natural",
+    "trending": true,
+    "featured": true
+  },
+  {
+    "name": "Gond Katira",
+    "slug": "gond-katira",
+    "category":"organic-and-herbal-products",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/gond-katira.jpg",
+    "tag": "Herbal",
+    "trending": false,
+    "featured": false
+  },
+  {
+    "name": "Coconut Water Powder",
+    "slug": "coconut-water-powder",
+    "category":"organic-and-herbal-products",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/coconut-water-powder.jpg",
+    "tag": "Organic",
+    "trending": true,
+    "featured": false
+  },
+  {
+    "name": "Oregano Oil",
+    "slug": "oregano-oil",
+    "category":"organic-and-herbal-products",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/oregano-oil.jpg",
+    "tag": "Natural",
+    "trending": false,
+    "featured": true
+  },
+  {
+    "name": "Gems And Jewellery",
+    "slug": "gems-and-jewellery",
+    "category":"gems-and-jewellery",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/gems-and-jewellery.jpg",
+    "tag": "Luxury",
+    "trending": true,
+    "featured": false
+  },
+  {
+    "name": "Shellac",
+    "slug": "shellac",
+    "category":"gems-and-jewellery",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et nulla ac eros interdum commodo. Duis id pretium magna.",
+    "image": "https://example.com/images/shellac.jpg",
+    "tag": "Natural",
+    "trending": false,
+    "featured": false
+  }
+]
