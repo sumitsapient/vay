@@ -24,10 +24,12 @@ footer .footer-cols ul {
 footer .footer-cols ul li {
   margin-top: 8px;
   margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 16px;
   svg {
     height: 18px;
     width: 18px;
-    margin: 5px;
+    margin: 0 5px 0;
     path {
       fill: var(--black);
     }
@@ -77,9 +79,10 @@ footer .footer-cols ul li a:hover {
   footer .footer-cols ul li {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 18px;
   }
   footer .footer-cols ul li a {
     font-size: 14px;
-    line-height: 18px;
   }
 }
