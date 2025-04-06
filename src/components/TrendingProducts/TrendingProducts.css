@@ -71,6 +71,9 @@
 .heading-row {
   padding-bottom: 1.5rem;
 }
+.embla__button:disabled svg path {
+  fill: var(--primary-light-gray);
+}
 @media (width >= 768px) {
   .trending-carousel .embla__slide {
     flex: 0 0 100%;
