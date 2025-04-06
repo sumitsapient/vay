@@ -209,7 +209,7 @@ export default function ProductDetailsPage() {
           <div className="row">
             <div className="col-lg-5">
               <div className="product-image">
-                <img src="https://placehold.co/500x400" />
+                <img src="/wooden-toy-1x1.jpg" />
                 {/* <img
                   src={
                     selectedSubproduct

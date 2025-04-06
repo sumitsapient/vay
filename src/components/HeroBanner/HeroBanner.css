@@ -1,7 +1,8 @@
 .home-banner {
   padding-left: 0;
   padding-right: 0;
-  height: calc(100vh - var(--nav-height));
+  min-height: 600px;
+  height: calc(100vh - 130px);
   .carousel.slide {
     height: 100%;
     .carousel-inner {
@@ -63,7 +64,6 @@
 .hero-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   h1 {
     font-weight: 500;
     text-transform: uppercase;
@@ -84,24 +84,22 @@
   width: 44px;
   background-color: var(--white);
   opacity: 1;
-  top: 50%;
-  transform: translateY(-50%);
 }
 .carousel-control-prev {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%231f1f1f"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>');
   background-repeat: no-repeat;
   background-position: center;
-  left: 14px;
-  bottom: 0;
-  top: inherit;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .carousel-control-next {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%231f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>');
   background-repeat: no-repeat;
   background-position: center;
-  right: 14px;
-  bottom: 0;
-  top: inherit;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .carousel-control-next-icon,
 .carousel-control-prev-icon {

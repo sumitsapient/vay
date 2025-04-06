@@ -1,7 +1,7 @@
 .social-floating {
   position: fixed;
   right: 4px;
-  bottom: 70px;
+  bottom: 20px;
   z-index: 100;
   ul {
     list-style: none;
